@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表样式</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			li{
+				line-height: 40px;
+				/*去除样式 简写*/
+				list-style-type: circle;
+				/*列表样式转为图片*/
+				list-style-image: url(../img/flower.png);
+				/*定义列表符号位置*/
+				list-style-position: inside;
+			}
+			#bor{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				/*边框*/
+				border: 1px dashed #000;
+				/*边框  大小  线型   颜色*/
+				/*线型:实线solid  虚线dashed  点状线dotted 双实线double*/
+				/*圆角*/
+				/*border-radius: 50%;*/
+				border-radius: 25px;
+			}
+			#beijing{
+				/*背景颜色*/
+				background-color: deeppink;
+				/*背景图片*/
+				background-image: url(../img/flower.png);
+				/*背景图片是否平铺*/
+				/*不平铺*/
+				background-repeat: no-repeat;
+				/*平铺x轴*/
+				/*background-repeat: repeat-x;*/
+				/*平铺y轴*/
+				/*background-repeat: repeat-y;*/
+				/*背景图位置      水平位置和垂直位置*/
+				/*background-position: 水平位置 垂直位置;*/
+				/*水平位置 left/right/center/99px*/
+				/*垂直位置top/bottom/center/77px*/
+				/*注意    水平和垂直都是center时可以简写为center*/
+				/*background-position: right bottom;*/ 
+				background-position: 240px 300px;
+				border-radius: 50%;
+				width: 600px;
+				height: 600px;
+				font-size: 60px;
+				color: red;
+				text-align: center;	
+			}
+			#beijing span{
+				/*vertical-align: middle;*/
+				display: inline-block;
+				margin-top: 200px;
+			}
+			#day06{
+				width: 400px;
+				height: 400px;
+				/*background-color: pink;*/
+				/*background-image: url(../img/flower.png);*/
+				/*background-repeat: no-repeat;*/
+				/*background-position: center;*/
+				/*简写 颜色 图片 平铺 位置*/
+				background: pink url(../img/flower.png) no-repeat center;
+				
+				
+			}
+			body{
+				background: goldenrod url(../img/flower.png) no-repeat center;
+				background-attachment: fixed;
+			}
+			#day06 span{
+				display: inline-block;
+				/*display: block;*/
+				text-align: center;
+
+				vertical-align: bottom;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>随便写</li>
+			<li>随便写</li>
+			<li>随便写</li>
+			<li>随便写</li>
+			<li>随便写</li>
+		</ul>
+		<div id="bor">
+		</div>
+		<div id="beijing">
+			<span>hello world!!!</span>
+		</div>
+		<div id="day06">
+			<span>
+				hellow world!!
+			</span>
+		</div>
+		<div id="day">
+			
+		</div>
+	</body>
+</html>

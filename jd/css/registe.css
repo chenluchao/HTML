@@ -1,0 +1,174 @@
+header{
+width: 100%;
+height: 96px;
+border-bottom: 4px solid #e4e2e2;
+}
+#head{
+width: 1200px;
+height: 96px;
+margin: 0 auto;
+}
+#head img{
+float: left;
+margin-top: 20px;
+}
+#head h1{
+float: left;
+margin-top: 40px;
+margin-left: 15px;
+font-weight: normal;
+}
+#head p{
+font-size: 13px;
+float: right;
+margin-top: 58px;
+}
+#head span{
+font-size: 15px;
+color: #ee2222;
+}
+#head p a{
+text-decoration: none;
+}
+#head span:hover{
+text-decoration: underline;
+color: black;
+}
+nav{
+height: 676px;
+width: 100%;
+overflow: hidden;
+}
+#navcon{
+width: 405px;
+height: 410px;
+margin: 0 auto;
+margin-top: 80px;
+position: relative;
+}
+#navcon .shuzi{
+text-align: center;
+}
+.shuzi span{
+display: inline-block;
+width: 23px;
+height: 23px;
+text-align: center;
+color: white;
+font-size: 15px;
+}
+.shuzi span:first-child{
+background: url(../img/reg.png) no-repeat 0 -200px;
+}
+#navcon .shuzi span:nth-child(2){
+margin-left: 13px;
+margin-right: 13px;
+width: 85px;
+height: 15px;
+vertical-align: middle;
+background: url(../img/reg.png) no-repeat 0 -40px;
+}
+#navcon .shuzi span:nth-child(3){
+background: url(../img/reg.png) no-repeat -45px -200px;
+color: #c7c7c0;
+}
+#navcon .shuzi span:nth-child(4){
+margin-left: 13px;
+margin-right: 13px;
+width: 85px;
+height: 15px;
+vertical-align: middle;
+background: url(../img/reg.png) no-repeat 0 -40px;
+}
+#navcon .shuzi span:nth-child(5){
+background: url(../img/reg.png) no-repeat -45px -200px;
+color: #c7c7c0;
+}
+#navcon .hanzi{
+margin-top: 15px;
+}
+#navcon .hanzi span:first-child{
+color: #33bb44;
+margin-right: 70px;
+margin-left: 30px;
+}
+#navcon .hanzi span:nth-child(2){
+margin-right: 80px;
+color: #c7c7c0;
+}
+#navcon .hanzi span:nth-child(3){
+color: #c7c7c0;
+}
+#navcon form p{
+border: 1px solid #c7c7c0;
+width: 393px;
+height: 51px;
+margin-top: 55px;
+}
+#navcon select{
+width: 108px;
+height: 51px;
+outline: none;
+border: 0;
+border-right: 1px solid #c7c7c0;
+vertical-align: middle;
+}
+#navcon form p:first-child input{
+width: 285px;
+height: 51px;
+border: 0;
+outline: none;
+margin-left: -4px;
+vertical-align: middle;
+}
+#navcon .tijiao{
+border: 1px solid #c7c7c0;
+outline: none;
+width: 393px;
+height: 51px;
+margin-top: 34px;
+background-color: white;
+font-size: 12px;
+}
+#navcon [type=button]{
+background-color: #e2231a;
+color: white;
+border: 0;
+outline: none;
+width: 393px;
+height: 51px;
+margin-top: 55px;
+font-size: 15px;
+}
+#navcon [type=button]:hover{
+background-color: brown;
+}
+#navcon .zui{
+font-size: 14px;
+}
+#navcon .z{
+margin-top: 30px;
+}
+#navcon .z img,#navcon .z span{
+vertical-align: middle;
+}
+#navcon .z img:nth-child(3){
+margin-left: 176px;
+}
+#navcon .z span:hover{
+text-decoration: underline;
+color: red;
+}
+#navcon .dis img,#navcon .dis span{
+vertical-align: middle;
+}
+#navcon .dis{
+position: absolute;
+top: 162px;
+left: 10px;
+color: #c7c7c0;
+visibility: hidden;
+}
+#navcon .kuang:hover{
+border: 1px solid black;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+		/*更改placeholder文字颜色*/
+		input::-webkit-input-placeholder{
+			color:yellow;
+		}
+		/*点击到input时，聚焦时*/
+		input:focus{
+			background: green;
+		}
+		input{
+			color:red;
+			background: greenyellow;
+			border:0;
+			/*去除聚焦线*/
+			outline: 0;
+			/*outline:2px solid #f89;*/
+		}
+	</style>
+</head>
+<body>
+	<input type="text" value="啊啊啊啊">
+	<input type="text" placeholder ="啊啊啊啊">
+
+</body>
+</html>

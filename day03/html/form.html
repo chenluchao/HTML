@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form表单新增控件</title>
+	</head>
+	<body>
+		<form action="" method="" name="">
+			<!--属性min最小值 属性max最大值 step步长-->
+			<p><input type="number" min="1" max="50" step="10"/></p>
+			<!--上传文件-->
+			<p><input type="file" /></p>
+			<!--颜色框-->
+			<p>取色器<input type="color" /></p>
+			<!--进度条-->
+			<p>进度条<input type="range" step="10" /></p>
+			<!--搜索框-->
+			<p>搜索<input type="search" /></p>
+			<!--链接地址-->
+			<p>链接<input type="url" /></p>
+			<!--电子邮件    属性multiple 代表可写多个邮箱用逗号隔开multiple="2"表示可写两个 /multiple表示可以写任意个  -->
+			<p>电子邮箱<input type="email" /></p>
+			<p>多个电子邮箱<input type="email" multiple="2"/></p>
+			<p>多个电子邮箱<input type="email" multiple/></p>
+			<!--电话号码属性正则表达式
+				[\w]代表字母数字下划线均可
+			-->
+			<p>电话+正则<input type="tel" pattern="[\w]{11}"/></p>
+			<!--图片域-->
+			<p>图片域<input type="image" src="../img/flower.png" width="100" height="100" /></p>
+			<a href=""><img src="../img/flower.png" width="100" height="100" /></a>
+			<!--date年月日-->
+			<p>年月日<input type="date" /></p>
+			<!--time时分-->
+			<p>时分<input type="time" name="" id="" value="" /></p>
+			<!--month年月-->
+			<p>年月<input type="month" name="" id="" value="" /></p>
+			<!--week年周-->
+			<p>年周<input type="week" name="" id="" value="" /></p>
+			<!--年月日时分-->
+			<p>年月日时分<input type="datetime-local" name="" id="" value="" /></p>
+			
+			
+			<p><input type="submit" /></p>
+		</form>
+	</body>
+</html>

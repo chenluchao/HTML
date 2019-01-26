@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 500px;
+				height: 312px;
+				position: relative;
+				margin: 0 auto;
+			}
+			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				border: 0;
+				transition: 3s;
+			}
+			div .i1{
+				transform: scale(0);
+			}
+			div:hover .i1{
+				transform: scale(1);
+			}
+			div:hover .i2{
+				transform: scale(0) rotate(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img class="i1" src="../img/1.jpg"/>
+			<img class="i2" src="../img/5.jpg"/>
+		</div>
+	</body>
+</html>

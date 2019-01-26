@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#big{
+				width: 340px;
+				height: 182px;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#big:hover #cover{
+				animation-play-state: paused;
+			}
+			img{
+				display: block;
+				border: 0;
+			}
+			#cover{
+				height: 182px;
+				margin: 0 auto;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				animation-name: s;
+				animation-duration: 5s;
+				animation-timing-function: steps(4);
+				animation-iteration-count: infinite;
+			}
+			@-webkit-keyframes s {
+				100%{top: -728px;  }
+			}
+			@-o-keyframes s {
+				100%{top: -728px;  }
+			}
+			@-moz-keyframes s {
+				100%{top: -728px;  }
+			}
+			@keyframes s {
+				100%{top: -728px;  }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div id="cover">
+				<img src="../img/7.jpg" />
+				<img src="../img/8.jpg" />
+				<img src="../img/9.jpg" />
+				<img src="../img/7.jpg" />
+			</div>
+		</div>
+	</body>
+</html>

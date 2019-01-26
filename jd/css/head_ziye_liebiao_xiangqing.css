@@ -1,0 +1,133 @@
+header{
+width: 100%;
+height: 30px;
+background-color: #e3e4e5;
+}
+.same{
+width: 1200px;
+margin: 0 auto;
+}
+#headbao{
+height: 30px;
+}
+#head{
+color: #999999;
+width: 995px;
+height: 30px;
+float: right;
+position: relative;
+}
+.home{
+margin-top: 6px;
+vertical-align: middle;
+}
+.hom{
+text-decoration: none;
+color: #999999;
+vertical-align: middle;
+margin-top: 6px;
+display: inline-block;
+}
+.hom:hover{
+color: red;
+}
+.ding{
+display: inline-block;
+position: absolute;
+}
+.dw{
+display: inline-block;
+line-height: 26px;
+margin-left: -105px;
+}
+.dw b,.dw img{
+vertical-align: middle;
+}
+.dz{
+width: 250px;
+height: 240px;
+margin-left: -106px;
+margin-top: 1px;
+overflow: hidden;
+background-color: white;
+display: none;
+z-index: 2;
+position: absolute;
+}
+section:hover .dz{
+display: block;
+border: 1px solid darkgrey;
+}
+section:hover .dw{
+border: 1px solid darkgrey;
+border-bottom: none;
+}
+.dz1{
+margin-top: 10px;
+}
+.dz1 span{
+margin-left: 20px;
+}
+.dz .dz1 span:nth-child(1){
+margin-left: 8px;
+}
+#h_right a,#h_right span{
+color: #999999;
+text-decoration: none;
+display: inline-block;
+line-height: 30px;
+margin-right: 10px;
+float: left;
+}
+.a_1{
+margin-left: 350px;
+}
+#h_right span{
+margin-right: 10px;
+}
+.myjdda{
+float: left;
+}
+.my_jd{
+width: 200px;
+height: 150px;
+margin-top: 30px;
+margin-left: -12px;
+display: none;
+background-color: white;
+border: 1px solid darkgrey;
+}
+.myjdda:hover .my_jd,.myjdda:hover .my_jd2{
+display: block;
+position: absolute;
+z-index: 3;
+}
+.my_jd1{
+width: 145px;
+height: 60px;
+}
+.my_jd2{
+width: 1185px;
+height: 150px;
+background-color: white;
+margin-top: 30px;
+margin-left: -1050px;
+display: none;
+border: 1px solid darkgrey;
+}
+#head .my_jd p{
+margin-top: 5px;
+margin-left: 10px;
+word-spacing: 30px;
+}
+#small{
+width: 290px;
+height: 140px;
+margin-top: 5px;
+border-right: 1px dotted gainsboro;
+float: left;
+margin-left: 4px;
+}
+#head a:hover,#head span:hover{
+color: red;
+}

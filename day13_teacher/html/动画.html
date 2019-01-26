@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+	/*过渡   变换   时间*/
+		*{
+			margin:0;
+			padding:0;
+		}
+		div{
+			margin:0 auto;
+			margin-top: 10px;
+			width: 200px;
+			height: 200px;
+			background: red;
+			border:1px solid #000;
+			/*过渡时间*/
+			transition-duration: 2s;
+			/*延迟时间*/
+			/*transition-delay: 1s;*/
+			/*变换的属性  如果是多个则用逗号隔开；全部属性用all*/
+			transition-property:all;
+			/*过渡时间函数    匀速*/
+			transition-timing-function: linear;
+		}
+		div:nth-child(1):hover{
+			width: 400px;
+			height: 400px;
+			background: green;
+
+		}
+		div:nth-child(2):hover{
+			/*放大*/
+			transform: scale(2);
+		}
+		div:nth-child(3):hover{
+			/*放大*/
+			transform: scale(-1);
+		}
+		div:nth-child(4):hover{
+			/*旋转  单位 deg  默认为x轴*/
+			transform: rotate(300deg);
+		}
+		div:nth-child(5):hover{
+			/*旋转Y  单位 deg*/
+			transform: rotateY(300deg);
+		}
+		div:nth-child(6):hover{
+			/*拉伸  单位 deg*/
+			transform: skew(30deg);
+		}
+		div:nth-child(7):hover{
+			/*拉伸Y轴  单位 deg*/
+			transform: skewY(30deg);
+		}
+		div:nth-child(8):hover{
+			/*位移 单位 像素px*/
+			transform: translate(30px);
+		}
+		div:nth-child(9):hover{
+			/*位移Y 单位 像素px*/
+			transform: translateY(-30px);
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div>放大</div>
+	<div>缩小</div>
+	<div>旋转</div>
+	<div>旋转Y</div>
+	<div>拉伸</div>
+	<div>拉伸Y</div>
+	<div>位移</div>
+	<div>位移Y</div>
+</body>
+</html>

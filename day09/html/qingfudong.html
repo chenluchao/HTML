@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>清浮动</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#big{
+				background-color: blue;
+				/*清浮动的方法*/
+				/*方法1*/
+				/*overflow: hidden;*/
+				/*display: block;/inline/inline-block/none将元素消失/list-items列表/*/
+				
+			}
+			#big::after{
+				content: "";
+				clear: both;
+				display: block;
+				height: 0;
+				visibility: hidden;
+				overflow: hidden;
+			}
+			#small{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				border: 1px solid blueviolet;
+				float: left;
+			}
+			#demo{
+				height: 200px;
+				background-color: goldenrod;
+			}
+			/*.ps{
+				height: 0px;
+				clear: left;
+			}*/
+			
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div id="small"></div>
+			<div id="small"></div>
+			<!--<div class="ps"></div>-->
+		</div>
+		<div id="demo"></div>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>css核心属性</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*元素选择器*/
+			div{
+				/*默认情况文字大小为16px*/
+				/*文字大小*/
+				/*font-size: 20px;*/
+				/*单位:px em rem vh vw vmin vmax pc ppi %...;*/
+			}
+			#big{
+				font-size: 32px;
+			}
+			.small{
+				font-size: 2em;/*60px*/
+			}
+			#famaly{
+				font-size: 50px;
+				color: green;
+				font-family:'楷体','宋体';
+			}
+			#hang{
+				width: 200px;
+				height: 100px;
+				background-color: #008000;
+				font-size: 20px;
+				color: brown;
+				/*行高*/
+				/*在单行文本中一般把行高设置为和元素高度一样大*/
+				line-height: 100px;
+			}
+			ul{
+				background-color: greenyellow;
+				width: 320px;
+			}
+			li{
+				/*white-space: pre;*/
+				word-spacing: 20px;
+				letter-spacing: 6px;
+				font-size: 14px;
+				line-height: 36px;
+			}
+			span{
+				font-size: 10px;
+				color: grey;
+			}
+			li:hover,li span:hover{
+				color: red;
+			}
+			#first{
+				width: 300px;
+				height: 200px;
+				background-color: forestgreen;
+				line-height: 200px;
+				font-size: 64px;
+				font-family: '楷体';
+				font-weight: 500;
+				font-style: italic;
+			}
+			#pm01{
+				width: 600px;
+				height: 200px;
+				background-color: cornflowerblue;
+				color: red;
+				font: italic bold 40px/200px '楷体'
+			}
+			/*em单位默认情况1em=16px 但是它会根据父元素的大小改变;如果父元素font-size:30px;那么这个时候子元素1em=30px;*/
+		</style>
+	</head>
+	<body>
+		<div id="first">今天周一</div>
+		<div id="big">父元素
+			<div class="small">你好！！</div>
+		</div>
+		<div id="famaly">
+			孙惠
+		</div>
+		<div id="hang">
+			行高
+		</div>
+		<ul>
+			<li>欢迎 <span>2018/08/20</span> </li>
+			<li>欢迎 <span>2018/08/20</span> </li>
+			<li>欢迎              <span>2018/08/20</span></li>
+			<li>欢迎	<span>2018/08/20</span> </li>
+			<li>欢迎 <span>2018/08/20</span> </li>
+			<li>欢迎      <span>2018/08/20</span> </li>
+		</ul>
+		<div id="pm01">
+			大吉大利今晚吃鸡
+		</div>
+	</body>
+</html>

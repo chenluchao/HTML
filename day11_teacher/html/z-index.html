@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>层叠属性,只能用于定位中</title>
+	<style>
+		#big{
+			width: 400px;
+			height: 400px;
+			background: green;
+			position: relative;
+
+		}
+		#big div{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+		}
+		.small1{
+			background: pink;
+			/*层叠属性,只能用于定位中*/
+			z-index: 0;
+		}
+		.small2{
+			background: cyan;
+			z-index: -3;
+		}
+	</style>
+</head>
+<body>
+	<div id="big">
+		<div class="small1"></div>
+		<div class="small2"></div>
+	</div>
+</body>
+</html>

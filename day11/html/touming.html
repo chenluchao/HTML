@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>透明度</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				/*透明度取值0~1*/
+				/*opacity: 1;*/
+				/*兼容ie低版本取值0~100*/
+				/*filter: alpha(opacity=50);*/
+				/*改变背景透明度,字体不变透明度*/
+				background: rgba(210,20,30,0.1);
+			}
+			div span{
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>hello   world!!!</span>
+		</div>
+	</body>
+</html>

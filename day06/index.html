@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>盒子模型</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#head{
+				width: 200px;
+				height: 170px;
+				background-color: pink;
+				/*内容与边界间的距离*/
+				padding-left: 200px;
+				padding-top: 30px;
+				/*margin-top: 30px;*/
+			}
+			#menu a{
+				display: inline-block;
+				margin-top: 20px;
+				text-decoration: none;
+				color: red;
+				background-color: pink;
+				padding-left: 20px;
+				padding-right: 20px;
+				border: 1px dotted green;
+			}
+			#big{
+				width: 250px;
+				height: 150px;
+				background-color: red;
+				padding: 50px;
+			}
+			.small{
+				width: 50px;
+				height: 50px;
+				background-color: blue;
+			}
+			/*注意由于行元素不可设置宽高所以padding只能使用左右值不能使用上下值*/
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<img src="img/flower.png"/>
+		</div>
+		<div id="menu">
+			<a href="#">你好</a>
+			<a href="#">你好</a>
+			<a href="#">你好</a>
+			<a href="#">你好</a>
+			<a href="#">你好</a>
+		</div>
+		<div id="big">
+			<div class="small">
+				
+			</div>
+		</div>
+	</body>
+</html>

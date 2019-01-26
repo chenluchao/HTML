@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>pic_arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M46,90 C70.300529,90 90,70.300529 90,46 C90,21.699471 70.300529,2 46,2 C21.699471,2 2,21.699471 2,46 C2,70.300529 21.699471,90 46,90 Z"></path>
+        <circle id="path-3" cx="44" cy="44" r="44"></circle>
+        <path d="M44,88 C68.300529,88 88,68.300529 88,44 C88,19.699471 68.300529,0 44,0 C19.699471,0 0,19.699471 0,44 C0,68.300529 19.699471,88 44,88 Z M44,73 C60.0162577,73 73,60.0162577 73,44 C73,27.9837423 60.0162577,15 44,15 C27.9837423,15 15,27.9837423 15,44 C15,60.0162577 27.9837423,73 44,73 Z" id="path-5"></path>
+        <path d="M76.034066,78.1553864 C76.7649153,77.4724629 77.4724629,76.7649153 78.1553864,76.034066 L45.1824254,43.0611051 C44.5903284,42.469008 43.6464466,42.4748737 43.0606602,43.0606602 C42.4707897,43.6505306 42.4750729,44.5963933 43.0611051,45.1824254 L76.034066,78.1553864 Z" id="path-7"></path>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_1280" transform="translate(-980.000000, -1880.000000)">
+            <g id="房产新闻&amp;问答" transform="translate(0.000000, 1780.000000)">
+                <g id="问答" transform="translate(655.000000, 70.000000)">
+                    <g id="pic_arrow" transform="translate(325.000000, 30.000000)">
+                        <g>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Combined-Shape" fill="#D6D6D6" xlink:href="#path-1"></use>
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Combined-Shape" fill="#FFFFFF" xlink:href="#path-3"></use>
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="Combined-Shape" fill="#3D9AD9" xlink:href="#path-5"></use>
+                            <circle id="Oval-33" fill="#67CDFD" cx="44" cy="44" r="16"></circle>
+                            <circle id="Oval-34" fill="#E34940" cx="44" cy="44" r="3"></circle>
+                        </g>
+                        <mask id="mask-8" fill="white">
+                            <use xlink:href="#path-7"></use>
+                        </mask>
+                        <use id="Combined-Shape" fill-opacity="0.4" fill="#6E6E6E" xlink:href="#path-7"></use>
+                        <g id="arrow" transform="translate(26.000000, 61.500000) rotate(-45.000000) translate(-26.000000, -61.500000) translate(-1.000000, 54.000000)">
+                            <rect id="Rectangle-159" fill="#E37B2D" x="0" y="6" width="54" height="3" rx="4"></rect>
+                            <path d="M2,0 L19.6842105,0 L23,6 L5.31578947,6 L2,0 Z" id="Rectangle-157" fill="#EFC22A"></path>
+                            <path d="M5.31578947,9 L23,9 L19.6842105,15 L2,15 L5.31578947,9 Z" id="Rectangle-157" fill="#F09A27"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

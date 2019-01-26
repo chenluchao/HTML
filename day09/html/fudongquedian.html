@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动缺点</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#big{
+				background-color: red;
+			}
+			.small{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				/*高度塌陷*/
+				/*给小div设置浮动,小的就浮动不在文档流中所以大div就会消失即不显示*/
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div class="small"></div>
+			<div class="small"></div>
+		</div>
+	</body>
+</html>

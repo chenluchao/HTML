@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			background: red;
+			padding-left: 30px;
+		}
+		/*:after加在元素后面的内容*/
+		div:hover::after{
+			content: '^_^';
+			color:green;
+
+		}
+		/*:before加在元素前面的内容*/
+		div:hover::before{
+			content: '╭(╯^╰)╮';
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div>你好，很高兴认识你</div>
+</body>
+</html>

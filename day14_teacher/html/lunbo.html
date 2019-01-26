@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.cover{
+			/*width: 500px;*/
+			height: 312px;
+			margin:0 auto;
+			position: absolute;
+			top:0;
+			left:0;
+			/*动画名字*/
+			animation-name: lunbo;
+			/*动画时间*/
+			animation-duration: 5s;
+			/*动画次数*/
+			animation-iteration-count: infinite;
+			/*动画变换函数*/
+			animation-timing-function: steps(5);
+		}
+		#big:hover .cover{
+			/*动画暂停*/
+			animation-play-state: paused;
+		}
+		img{
+			display: block;
+			border:0;
+		}
+		#big{
+			width: 500px;
+			height: 312px;
+			overflow: hidden;
+			margin:0 auto;
+			position: relative;
+		}
+		@-webkit-keyframes lunbo {
+			100%{top:-1560px;}
+		}
+		@-o-keyframes lunbo {
+			100%{top:-1560px;}
+			
+		}
+		@-moz-keyframes lunbo {
+			100%{top:-1560px;}
+		}
+		@keyframes lunbo {
+			100%{top:-1560px;}
+		}
+	</style>
+</head>
+<body>
+	<div id="big">
+		<div class="cover">
+			<img src="../img/2.jpg" alt="">
+			<img src="../img/3.jpg" alt="">
+			<img src="../img/4.jpg" alt="">
+			<img src="../img/5.jpg" alt="">
+			<img src="../img/6.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>

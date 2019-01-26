@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin: 0 auto;
+				border: 1px solid black;
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/*过渡时间*/
+				transition-duration: 2s;
+				/*延迟时间*/
+				/*transition-delay: 1s;*/
+				/*变换的属性 如果是多个用逗号隔开如果全部则用all*/
+				transition-property: all;
+				/*过渡时间函数*/
+				/*匀速*/
+				/*transition-timing-function: linear;*/
+				/*慢到快*/
+				/*transition-timing-function: ease-in;*/
+				/*快到慢*/
+				/*transition-timing-function: ease-out;*/
+				transition-timing-function: ease-in-out;
+			}
+			.s1:hover{
+				width: 400px;
+				height: 400px;
+				background-color: green;
+			}
+			div:nth-child(2):hover{
+				transform: scale(2);
+			}
+			div:nth-child(4):hover{
+				transform: rotate(360deg);
+				/*transform: rotateX(360deg);*/
+				/*transform: rotateY(360deg);*/
+				/*transform: rotateZ(360deg)*/
+			}
+			div:nth-child(5):hover{
+				/*transform: skew(30deg);*/
+				/*transform: skewX(20deg);*/
+				transform: skewY(20deg);
+			}
+			div:nth-child(6):hover{
+				/*transform: translate(10px);*/
+				/*transform: translateX(10px);*/
+				transform: translateY(-10px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s1"></div>
+		<div>放大</div>
+		<div>缩小</div>
+		<div>旋转</div>
+		<div>拉伸</div>
+		<div>位移</div>
+		<div></div>
+	</body>
+</html>

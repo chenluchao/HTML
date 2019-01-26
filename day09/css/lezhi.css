@@ -1,0 +1,300 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.same{
+	width: 1002px;
+	margin: 0 auto;
+}
+#head{
+border-bottom: 1px solid grey;
+}
+#headcon{
+	height: 43px;
+	padding-right: 37px;
+	box-sizing: border-box;
+}
+#headcon a{
+	display: inline-block;
+	line-height: 43px;
+	text-decoration: none;
+	color: black;
+	border-right: 1px solid grey;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+#headcon button{
+	border: 0;
+	background-color: #fe4e02;
+	height: 43px;
+	width: 80px;
+	float: right;
+}
+#democon{
+	height: 76px;
+	overflow: hidden;
+}
+#democon img{
+	margin-top: 16px;
+}
+#democon a{
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	line-height: 76px;
+	padding: 0 22px;
+}
+#lianjie{
+	margin-right: 70px;
+	float: right;
+}
+#lianjie a:hover{
+	color: firebrick;
+}
+#logo img{
+	width: 100%;
+	height: 450px;
+	margin: 0 auto;
+}
+#zhong{
+	border-bottom: 1px solid grey;
+	height: 847px;
+	background-color: #f4f4f4;
+}
+#zhongcon{
+	height: 867px;
+	overflow: hidden;
+}
+.wenzi1{
+	font-size: 22px;
+	margin-left: 350px;
+	margin-top: 45px;
+}
+.wenzi2{
+	font-size: 13px;
+	margin-left: 270px;
+	margin-top: 25px;
+}
+#nr1{
+	height: 300px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+#nr2{
+	height: 300px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+#zhongcon i{
+	display: inline-block;
+	border-bottom: 1px solid darkgrey;
+	vertical-align: middle;
+}
+#zhongcon img{
+	vertical-align: middle;
+}
+#shujcon{
+	height: 850px;
+	overflow: hidden;
+}
+.xiong{
+	font-size: 32px;
+	text-align: center;
+	margin-top: 38px;
+}
+#shujcon i{
+	display: inline-block;
+	border-bottom: 1px solid grey;
+	vertical-align: middle;
+	width: 150px;
+}
+#shujcon b{
+	display: inline-block;
+	border-bottom: 1px solid #ff6600;
+	width: 70px;
+	vertical-align: middle;
+}
+#shujcon span{
+	display: inline-block;
+	font-size: 50px;
+	color: #ff6600;
+	vertical-align: middle;
+}
+.ling{
+	text-align: center;
+}
+#xiongbian{
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+#xiongbian img{
+margin-top: 15px;
+float: left;
+}
+.xiao1{
+	width: 235px;
+	height: 80px;
+	float: left;
+	margin-top: 10px;
+	border-bottom: 1px solid #ff6600;
+}
+.zi1_1{
+	font-size: 35px;
+}
+.zi1_2{
+	font-size: 18px;
+}
+#tuwen1{
+	margin-left: 30px;
+}
+#tuwen3{
+	margin-right: 30px;
+}
+#pingjia{
+	height: 415px;
+}
+#tou{
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-top: 2px solid grey;
+}
+.pj{
+height: 132px;
+margin-top: 10px;
+}
+.pj img{
+float: left;
+margin-left: 42px;
+margin-top: 40px;
+}
+.pjcon{
+width: 887px;
+height: 76px;
+float: right;
+margin-top: 22px;
+border: 1px solid grey;
+box-sizing: border-box;
+}
+.pjcon strong{
+font-weight: normal;
+color: darkgray;
+float: right;
+margin-right: 50px;
+margin-top: 10px;
+}
+.pjcon p{
+margin-top: 10px;
+margin-left: 15px;
+font-size: 12px;
+}
+.pjcon .con{
+font-size: 16px;
+}
+#lastdemo{
+height: 256px;
+width: 100%;
+background-color: #043c55;
+overflow: hidden;
+}
+#lastdemocon{
+height: 165px;
+margin-top: 55px;
+}
+#lastdemocon fieldset{
+border-left: none;
+border-bottom: none;
+border-right: none;
+color: white;
+border-top: 2px double #065e83;
+}
+#lastdemocon p{
+color: #618c9d;
+}
+.lastcon_1{
+width: 220px;
+height: 165px;
+float: left;
+}
+.lastcon_1 img{
+margin-top: 17px;
+margin-left: 7px;
+}
+.xiaxian{
+border: 1px solid #065e83;
+}
+.lastcon_2{
+width: 228px;
+height: 165px;
+float: left;
+margin-left: 15px;
+}
+.lastcon_3{
+width: 216px;
+height: 165px;
+float: left;
+margin-left: 15px;
+}
+.lastcon_3 button{
+width: 80px;
+height: 32px;
+background-color: #032433;
+border: none;
+border-radius: 5px;
+}
+.lastcon_4{
+width: 209px;
+height: 165px;
+float: left;
+margin-left: 15px;
+}
+.last_4{
+margin-left: 10px;
+line-height: 30px;
+word-spacing: 3px;
+}
+footer{
+width: 100%;
+height: 206px;
+overflow: hidden;
+}
+#foot{
+width: 720px;
+height: 145px;
+margin: 0 auto;
+margin-top: 28px;
+}
+.footcon{
+word-spacing: 5px;
+text-align: center;
+line-height: 40px;
+}
+.lasttu{
+width: 120px;
+height: 50px;
+margin-top: 30px;
+float: left;
+}
+.lasttu_1{
+width: 37px;
+height: 50px;
+text-align: center;
+float: left;
+}
+.lasttu_1 img{
+margin-top: 8px;
+}
+.lasttu_2{
+width: 83px;
+height: 50px;
+float: left;
+overflow: hidden;
+}
+.lasttu_2_1{
+margin-top: 9px;
+}

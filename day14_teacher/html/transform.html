@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变换</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border:1px solid #f90;
+			background: pink;
+			margin:0 auto;
+			margin-top: 5px;
+			transition-duration: 3s;
+		}
+		div:nth-of-type(1):hover{
+			/*变大*/
+			transform:scale(2);
+		}
+		div:nth-of-type(2):hover{
+			/*变小*/
+			transform: scale(0);
+		}
+		div:nth-of-type(3):hover{
+			/*大变小*/
+			transform: scale(-1);
+		}
+		div:nth-of-type(4):hover{
+			/*旋转*/
+			transform: rotate(200deg);
+		}
+		div:nth-of-type(5):hover{
+			/*延Y轴旋转*/
+			transform: rotateY(200deg);
+		}
+		div:nth-of-type(6):hover{
+			/*拉伸*/
+			transform: skew(40deg);
+		}
+		div:nth-of-type(7):hover{
+			/*延Y轴拉伸*/
+			transform: skewY(40deg);
+		}
+		div:nth-of-type(8):hover{
+			/*位移*/
+			transform: translate(100px);
+		}
+		div:nth-of-type(9):hover{
+			/*延Y轴位移*/
+			transform: translateY(100px);
+		}
+		.cc:hover{
+			/*简写*/
+			transform: translate(100px,100px);
+		}
+		.dd:hover{
+			/*简写*/
+			transform: scale(2,3);
+		}
+		
+		.ff:hover{
+			/*简写*/
+			transform: skew(30deg,40deg);
+		}
+		.ee:hover{
+			transform:scale(2) rotate(50deg) skew(30deg) translate(100px);
+		}
+	</style>
+</head>
+<body>
+	<div>变大</div>
+	<div>变小</div>
+	<div>大变小</div>
+	<div>旋转</div>
+	<div>延Y轴旋转</div>
+	<div>拉伸</div>
+	<div>延Y轴拉伸</div>
+	<div>位移</div>
+	<div>延Y轴位移</div>
+	<div class="cc">位移简写</div>
+	<div class="dd">放大简写</div>
+	<div class="ff">拉伸简写</div>
+	<div class="ee">所有简写</div>
+	
+</body>
+</html>

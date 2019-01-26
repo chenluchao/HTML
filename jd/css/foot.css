@@ -1,0 +1,96 @@
+#last{
+margin-top: 30px;
+width: 100%;
+height: 50px;
+background-color: #f0f3ef;
+}
+#lastcon{
+width: 1107px;
+height: 50px;
+margin: 0 auto;
+background-color: #f0f3ef;
+}
+#lastcon img,#lastcon span{
+vertical-align: middle;
+margin-left: 10px;
+}
+#lastcon img{
+margin-left: 40px;
+}
+#lastcon span{
+font-weight: bold;
+font-size: 18px;
+}
+footer{
+width: 100%;
+height: 469px;
+background-color: #f0f3ef;
+}
+#foot{
+height: 240px;
+overflow: hidden;
+border-bottom: 1px solid darkgray;
+background-color: #f0f3ef;
+}
+#foot dl{
+float: left;
+font-size: 12px;
+}
+#foot dl dt{
+font-weight: bold;
+margin-top: 30px;
+}
+#foot dl dd{
+margin-top: 10px;
+}
+.liz{
+margin-left: 140px;
+}
+.fugai{
+float: right;
+margin-top: 30px;
+}
+#foot dd:hover{
+color: red;
+}
+#foot2{
+height: 266px;
+background-color: #f0f3ef;
+}
+#foot2 a{
+display: inline-block;
+margin-top: 20px;
+text-decoration: none;
+color: black;
+margin-left: 10px;
+margin-right: 10px;
+}
+#foot2 a:hover{
+color: red;
+}
+.f1{
+margin-left: 202px;
+margin-top: 20px;
+}
+.f2{
+margin-left: 166px;
+margin-top: 10px;
+}
+.f3{
+margin-left: 190px;
+margin-top: 15px;
+}
+.f4{
+margin-left: 500px;
+margin-top: 15px;
+}
+.f5{
+margin-left: 330px;
+margin-top: 35px;
+}
+/*回顶*/
+#ding{
+position: fixed;
+bottom: 0;
+right: 0;
+}

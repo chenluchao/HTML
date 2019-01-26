@@ -1,0 +1,164 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-color: red;
+}
+.same{
+	width: 1352px;
+	margin: 0 auto;
+}
+#head{
+	height: 81px;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+#lianjie{
+	margin-left: 650px;
+	margin-top: -81px;
+}
+#lianjie a{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	width: 90px;
+	line-height: 81px;
+}
+#denn{
+	height: 467px;
+}
+#fu{
+	height: 400px;
+	overflow: hidden;
+}
+#fu i,#anli i,#zixun i{
+	width: 95px;
+	display: inline-block;
+	border-bottom: 1px solid darkgrey;
+	vertical-align: middle;
+}
+#fu strong,#anli strong,#zixun strong{
+	display: inline-block;
+	border: 5px solid gray;
+	border-radius: 50%;
+}
+#fu span{
+	margin-left: 32px;
+	margin-right: 32px;
+}
+#fu .fuzi{
+	margin-left: 510px;
+	margin-top: 40px;
+}
+#tu1{
+	padding-left: 140px;
+	padding-right: 80px;
+	overflow: hidden;
+	height: 300px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+#tu1 dl{
+	width: 200px;
+	text-align: center;
+}
+#anli{
+	height: 400px;
+	/*background-color: red;*/
+	overflow: hidden;
+}
+.anlinei{
+	height: 200px;
+	margin-top: 30px;
+	padding-left: 100px;
+	padding-right: 100px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+#anli button{
+	margin-left: 580px;
+	margin-top: 60px;
+	border: 0;
+	width: 180px;
+	height: 40px;
+	background-color: forestgreen;
+	border-radius: 30px;
+}
+#zixun{
+	height: 340px;
+	overflow: hidden;
+}
+.last{
+	height: 200px;
+	margin-top: 40px;
+	margin-left: 100px;
+	margin-right: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+.la2{
+	width: 470px;
+	height: 200px;
+}
+#bao{
+	display: flex;
+	
+}
+.la3{
+	width: 470px;
+	height: 200px;
+}
+.la2_1{
+	width: 110px;
+	height: 100px;
+	border-right: 1px solid darkgray;
+}
+.la2_2{
+    width: 110px;
+	height: 100px;
+	border-right: 1px solid darkgray;
+}
+.la3_1{
+	width: 90px;
+	height: 90px;
+	border-right: 1px solid darkgray;
+}
+.la3_2{
+	width: 120px;
+	height: 100px;
+	margin-left: 0px;
+	margin-top: 25px;
+	border-right: 1px solid darkgray;
+	text-align: center;
+}
+#foot{
+	height: 50px;
+	background-color: #67C5B5;
+	overflow: hidden;
+}
+#foot span{
+	color: white;
+	margin-top: 15px;
+	display: inline-block;
+	margin-left: 140px;
+}
+#foot a{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	width: 90px;
+	border-right: 1px solid white;
+	text-align: center;
+	margin-top: 15px;
+}
+#foot .zui{
+	border-right: none;
+}
+#foot .yi{
+	margin-left: 310px;
+}

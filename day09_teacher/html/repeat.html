@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#big{
+			background: blue;
+		}
+		.small{
+			width: 200px;
+			height: 200px;
+			background: red;
+			border:1px solid #000;
+			float: left;
+		}
+		#big:after{
+			content: '';
+			clear: left;
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="big">
+		<div class="small"></div>
+		<div class="small"></div>
+	</div>
+</body>
+</html>

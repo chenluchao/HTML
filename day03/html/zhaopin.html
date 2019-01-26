@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>智联招聘</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#red{
+				color: red;
+			}
+			#tel{
+				position: relative;
+				bottom: 2px;
+			}
+			#dd{
+				position: relative;
+				bottom: 140px;
+			}
+			#zi1{
+				position: relative;
+				bottom: 40px;
+			}
+			#zi2{
+				position: relative;
+				bottom: 80px;
+			}
+			#text{
+				position: absolute;
+				top: 2010px;
+				left: 383px;
+			}
+			#jian{
+				position: relative;
+				bottom: 70px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<form action="" method="" name="">
+				<fieldset>
+					<span style="white-space: pre;margin-left: 50px;line-height: 40px;"><b style="font-size: 18px;">个人信息</b>                       <span style="color: red;"><span id="red">*</span>为必填项</span></span>
+					<hr style="border-bottom: 2px solid #ccc;margin-left: 50px;" />
+					<div style="width: 600px;height: 650px;position: relative;left: 230px;white-space: pre;">
+<p><span id="red">*</span> 姓名                                                     <input type="text"autofocus="autofocus" required="required"/></p>
+<p><span id="red">*</span> 性别                                                     <label><input type="radio" name="sex"checked="checked"/>男</label><label><input type="radio"name="sex" />女</label></p>
+<p><span id="red">*</span> 出生日期                                               <select><option>1996</option><option>1997</option><option>1998</option> </select> 年 <select><option>1</option> <option>2</option><option>3</option> </select> 月</p>
+<p><span id="red">*</span> 参加工作年份                                        <input type="month" required="required"/></p>
+<p><span id="red">*</span> 户口所在地                                           <select><option>北京</option><option>上海</option><option>山东</option> </select></p>
+<p><span id="red">*</span> 现居住城市                                           <select><option>北京</option><option>上海</option><option>山东</option> </select></p>
+<p><span id="red">*</span> 联系方式                                              <input type="tel" pattern="[0-9]{11}" required="required" /></p>
+<p><span id="red">*</span> 电子邮箱                                              <input type="email" required="required" /></p>
+<p>   婚姻状况                                             <label><input type="radio" name="hun"checked="checked" />未婚</label><label><input type="radio"name="hun" />已婚</label><label><input type="radio"name="hun" />离异</label></p>
+<p>   国籍                                                    <select><option>中国大陆</option><option>中国台湾</option></select></p>
+<p>   证件                                                    <select><option>身份证</option><option>其他</option></select><input id="tel" type="tel" pattern="[0-9]{18}" /></p>
+<p>   海外学习/工作经历                              <label><input type="radio" name="s" />有</label><label><input type="radio"name="s" />无</label></p>
+<p>   政治面貌                                             <label><input type="radio" name="hu"checked="checked" />中共党员（含预备党员）</label><label><input type="radio"name="hu" />团员 </label><label><input type="radio"name="hu" /> 群众 </label><label><input type="radio"name="hu" /> 民主党派 </label><label><input type="radio"name="hu" /> 无党派人士</label></p>
+					</div>
+					<span style="white-space: pre;margin-left: 50px;line-height: 40px;"><b style="font-size: 18px;">求职意向</b>                       <span style="color: red;"><span id="red">*</span>为必填项</span></span>
+					<hr style="border-bottom: 2px solid #ccc;margin-left: 50px;" />
+					<div style="width: 1000px;height: 550px;position: relative;left: 230px;white-space: pre;">
+						<p><span id="red">*</span> 期望工作性质                                        <label><input type="checkbox" name="se"checked="checked"/> 全职 </label><label><input type="checkbox"name="se" /> 兼职 </label><label><input type="checkbox"name="se" /> 实习 </label></p>
+						<p><span id="red">*</span> 期望工作地点                                        <select><option>北京</option><option>上海</option><option>山东</option> </select></p>
+						<p><span id="red">*</span> 期望从事职业                                        <select><option>程序员</option><option>营销员</option><option>销售</option> </select></p>
+						<p><span id="red">*</span> 期望从事行业                                        <select><option>IT</option><option>餐饮业</option><option>旅游业</option> </select></p>
+						<p><span id="red">*</span> 期望月薪（税前）                                 <select><option>15000</option><option>18000</option><option>20000</option> </select> /月</p>
+						<p><span id="red">*</span> 工作状态                                              <select><option>我目前处于离职状态，可立即上岗</option><option>目前在职需要一周时间</option> </select></p>
+						<p>      <label><input type="checkbox" name="se1" />  将此求职意向显示在我的简历中 </label></p>
+					</div>
+					<span style="white-space: pre;margin-left: 50px;line-height: 40px;"><b style="font-size: 18px;">自我评价</b>                       <span style="color: red;"><span id="red">*</span>为必填项</span></span>
+					<hr style="border-bottom: 2px solid #ccc;margin-left: 50px;" />
+					<div style="width: 800px;height: 400px;white-space: pre;">
+			    <span style="color: darkgrey;">请简短叙述你的工作业绩、拥有的技能及特殊的专长，以更好的想企业展现自己。</span>
+			    <p>						<span id="red">*</span>  标题          <select><option>自我评价</option><option>他人评价</option> </select></p>
+			    <p>						<span id="dd"><span id="red">*</span>  内容</span>          <textarea rows="9" cols="40"></textarea> </p>
+			    	</div>
+			    	<span style="white-space: pre;margin-left: 50px;line-height: 40px;"><b style="font-size: 18px;">附件简历</b>                       <span style="color: red;"><span id="red">*</span>为必填项</span></span>
+					<hr style="border-bottom: 2px solid #ccc;margin-left: 50px;" />
+					<div style="width: 1000px;height: 800px;white-space: pre;">
+						<p>						<input type="radio" name="a1" /> 上传附件简历</p>
+						<p>						<span id="red"> 选择简历文档：</span>        <input type="file" /> </p>
+						<p id="zi1" style="color: darkgrey;">										您可以直接上传已编辑好的简历文档，请选择正确的路径后上传。</p>
+						<p id="zi2" style="color: darkgrey;">										仅支持World文档（.doc或.docx）Pdr文档（.pdf）,文件大小不要超过500k。</p>
+						<p id="jian">						<input type="radio" name="s1"/> 粘贴文本简历</p>
+						<p>						<span id="jian"><span id="red">*</span> 简历文本</span>                                   <textarea rows="10" cols="70" id="text"></textarea></p>
+						<p style="color: darkgrey;">
+										为确保信息安全，请勿在粘贴的简历中透露你的联系方式！
+										您可以将已有的简历拷贝粘贴到下列文本框中（限20000个字
+						</p>
+						<p>															<input type="submit" value="保存并完成"style="background-color: blue;color: white;border: 0;" /></p>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

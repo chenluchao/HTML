@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绝对定位</title>
+		<style type="text/css">
+			/*父相子绝*/
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.big{
+				width: 600px;
+				height: 600px;
+				background-color: pink;
+			}
+			.small1{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				position: absolute;
+				top:50px;
+			}
+			.small2{
+				width: 200px;
+				height: 200px;
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big">
+			<div class="small1"></div>
+			<div class="small2"></div>
+		</div>
+	</body>
+</html>

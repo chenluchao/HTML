@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素类型</title>
+	<style>
+		div{
+			width: 200px;
+			height: 100px;
+			background: red;
+			border:1px solid #000;
+			/*将元素转换为行内块元素*/
+			display: inline-block;
+		}
+		span{
+			background: blue;
+		}
+		input{
+			width: 100px;
+			height: 100px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div>块状元素</div>
+	<div>块状元素</div>
+	<span>行内元素</span>
+	<span>行内元素</span>
+	<span>行内元素</span>
+	<br>
+	<input type="text" value="行内块元素">
+	<input type="text" value="行内块元素">
+
+<!-- display将元素类型进行转换 -->
+<!-- display:block(块状元素)/inline(行内元素)/inline-block(行内块元素)/none(将元素消失)/list-items(列表)/table-cell(表格单元)........ -->
+</body>
+</html>

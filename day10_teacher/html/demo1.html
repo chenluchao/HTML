@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		marquee{
+			background: red;
+		}
+		input{
+			display: none;
+		}
+		label{
+			border:1px solid #000;
+			display: inline-block;
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			margin:0 5px;
+		}
+		input:checked + label{
+			border-color: #f00;
+			background: yellow;
+		}
+
+
+		/*锚点*/
+		#big img{
+			display: block;
+			border:0;
+		}
+		#big{
+			width: 500px;
+			height: 313px;
+			overflow: hidden;
+			margin-bottom: 10px;
+		}
+		#small img{
+			width: 80px;
+			height: 80px;
+			margin-left: 9px;
+		}
+	</style>
+</head>
+<body>
+	<marquee behavior="" direction="">明天就周二了</marquee>
+	<h4>尺码</h4>
+	<input id="size1" type="radio" name="same">
+	<label for="size1">37</label>
+	<input id="size2" type="radio" name="same">
+	<label for="size2">36</label>
+	<input id="size3" type="radio" name="same">
+	<label for="size3">38</label>
+	<input id="size4" type="radio" name="same">
+	<label for="size4">40</label>
+	<input id="size5" type="radio" name="same">
+	<label for="size5">35</label>
+	<h4>颜色</h4>
+	<input id="color1" type="radio" name="yanse">
+	<label for="color1">黄的</label>
+	<input id="color2" type="radio" name="yanse">
+	<label for="color2">蓝的</label>
+	<input id="color3" type="radio" name="yanse">
+	<label for="color3">绿的</label>
+	<input id="color4" type="radio" name="yanse">
+	<label for="color4">紫的</label>
+	<input id="color5" type="radio" name="yanse">
+	<label for="color5">红的</label>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<div id="big">
+		<img id="img1" src="../img/1.jpg" alt="">
+		<img id="img2" src="../img/2.jpg" alt="">
+		<img id="img3" src="../img/3.jpg" alt="">
+		<img id="img4" src="../img/4.jpg" alt="">
+		<img id="img5" src="../img/5.jpg" alt="">
+	</div>
+	<div id="small">
+		<a href="#img1"><img src="../img/1.jpg" alt=""></a>
+		<a href="#img2"><img src="../img/2.jpg" alt=""></a>
+		<a href="#img3"><img src="../img/3.jpg" alt=""></a>
+		<a href="#img4"><img src="../img/4.jpg" alt=""></a>
+		<a href="#img5"><img src="../img/5.jpg" alt=""></a>
+	</div>
+</body>
+</html>

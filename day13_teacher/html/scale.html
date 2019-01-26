@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		div{
+			width: 500px;
+			height: 312px;
+			margin:0 auto;
+			position: relative;
+		}
+		img{
+			display: block;
+			border:0;
+			position: absolute;
+			left: 0;
+			top:0;
+			transition: 3s;
+		}
+		div:hover .img2{
+			transform: scale(0) rotate(320deg);
+		}
+		div:hover .img1{
+			transform: scale(1);
+		}
+		.img1{
+			transform: scale(0);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="../img/2.jpg" alt="" class="img1">
+		<img src="../img/3.jpg" alt="" class="img2">
+	</div>
+</body>
+</html>

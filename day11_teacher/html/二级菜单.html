@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级菜单</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		header{
+			background: red;
+			height: 60px;
+		}
+		section{
+			float: left;
+			line-height: 60px;
+			padding:0 7%;
+			background: cyan;
+		}
+		ul{
+			list-style: none;
+			background: pink;
+			position: absolute;
+			display: none;
+		}
+		
+		section:hover ul{
+			display: block;
+		}
+		.jiashe{
+			width: 800px;
+			height: 300px;
+			background: green;
+			left: 0;
+		}
+		marquee{
+			background: gray;
+			height: 80px;
+			line-height:80px;
+			font-size: 26px;
+			font-weight: bolder;
+			color:#fff;
+		}
+		span,img{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<header>
+<!-- <section>H5新增标签 代表区域 区段 块状元素</section> -->
+		<section>今日折扣
+			<ul class="jiashe">
+				<li>爆炒虾尾</li>
+				<li>夫妻肺片</li>
+				<li>锅包肉</li>
+				<li>糖醋里脊</li>
+			</ul>
+		</section>
+		<section>今日热销
+			<ul>
+				<li>麻辣烫</li>
+				<li>梅菜扣肉</li>
+				<li>孜然牛肉</li>
+				<li>铁板鱿鱼</li>
+			</ul>
+		</section>
+		<section>今日套餐
+			<ul>
+				<li>茄子煲</li>
+				<li>排骨汤</li>
+				<li>白灼虾</li>
+				<li>炖肘子</li>
+			</ul>
+		</section>
+		<section>今日满减
+			<ul>
+				<li>油焖茄子</li>
+				<li>地三鲜</li>
+				<li>蚂蚁上树</li>
+				<li>麻辣鱼</li>
+			</ul>
+		</section>
+		<section>今日特色
+			<ul>
+				<li>胶东大菜</li>
+				<li>排骨豆角</li>
+				<li>酱鸡爪</li>
+				<li>麻辣兔头</li>
+			</ul>
+		</section>
+	</header>
+	<div id="banner">
+		<img src="../img/1527150843178.jpg" alt="">
+	</div>
+	<marquee behavior="" direction="left" scrollamount="10" width="" height="">
+		<img src="../img/la.png" alt="">
+		<span>燃烧我的卡路里</span>
+	</marquee>
+</body>
+</html>

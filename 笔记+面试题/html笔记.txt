@@ -1,0 +1,783 @@
+一、
+   Web标准：结构（html、xhtml）、表现(css)、行为(js)；
+二、
+   开标记、闭合标记。
+三、
+   <!DOCTYPE html>           声明文档类型为html(!document type html)
+   <html lang="en">           html是用英文编译代码的（html language='english'）
+        <head>
+            <meta charset='utf-8'>  声明编码格式为万国码 UTF-8注：中文是gb2312 或者gbk
+            <title>陈鲁超</title>   标题
+        </head>
+        <body>
+            用来写所有的结构内容（所有的标记都写在这里面）                                                 第一天
+        </body>
+   </html>
+四、H5是html第五次重大修改
+    h5是W3c和WHATWG联合发布
+    Hyper Text Markup Languge--html超文本标记语言
+    EXtensible Hyper Text Markup Language--xhtml可扩展超文本标记语言
+五、div：块状元素
+六、单标签：无闭合标签自身闭合
+     1.水平线：hr--<hr/>
+     2.强制换行：br--<br/>
+     3.编码格式：meta--<meta ../>
+七、行元素
+      不可设置宽高由内容大小撑起；行元素只能包含行元素；块元素可以包含块元素也可以包含行元素（p标签最好不包裹块元素）
+   1.占位符&nbsp;
+   2.版权所有&copy;
+   3.注册商标&reg;
+ * 4.引号&quot;
+   5.中文人名币&yen;
+   6.大于号&gt;
+   7.小于号&lt;
+
+注：块元素：p h1-h6 ol ul li dl dt dd div hr
+----------------------------------------------------------------------------------------------------------------------
+         caption
+         表格标题
+      
+         thead--------tr---------- th
+         表头         行         表头单元格
+      
+table   tbody---------tr-----------td
+表格     表主题       行          单元格
+      
+         tfoot--------tr------------td
+         表注(脚注)   行           单元格     
+                                                                                                   第二天
+数据表格的相关属性
+1）width="表格的宽度"
+2）height=“表格的高度”
+3）border=“表格的边框”
+4）bgcolor=“表格的背景色”
+   bordercolor=“表格边框的颜色”
+5）cellspacing=“单元格与单元格之间的间隙”
+6）cellpadding=“单元格与内容之间的空隙”
+7）水平对齐方式：align="left（默认）/center/right"；
+   垂直对齐方式：valign=“bottom/middle（默认）/top/”（td、tr可以使用但是不可以放table里面）
+8）合并单元格属性：
+   colspan=”所要合并的单元格的列数“合并列；
+   rowspan=”所要合并单元格的行数“合并列；
+9）       /*边框合并*/
+    border-collapse: collapse;
+----------------------------------------------------------------------------------------------------------------------
+表单的应用
+    表单的作用：用来收集用户的信息；
+    1.表单框
+      <form name='表单名称'method="post/get"action="">
+            name:表单名称
+            action：把数据提交到哪个路径
+            method：提交action所指向的url中的方式
+                     有两种方式 一种post 一种get
+      </form>
+    1)文本框
+       <input type="text" value="默认值" />
+       <input type="text" placeholder="框框里面显示的字"/>(失焦)
+           注意：改变失焦文字的颜色
+                input::-webkit-input-placeholder{
+			color: red;
+			}
+    2）密码框
+       <input type="password" />
+    3)提交按钮
+       <input type="submit"value="按钮内容" />
+    4)重置按钮
+       <input type="rest" value="按钮内容" />
+    5)单选框/单选按钮
+       <input type="radio" name="ral" />
+       <input type="radio" name="ral" />
+       单选按钮里的name属性必须写，同一组单选按钮的name属性值必须一样。                                第三天
+        checkd=”checked“（默认选中）
+        disabled="disabled"禁用
+        注：  <label><input type="radio" name="ral" /></label>
+              <label><input type="radio" name="ral" /></label>
+               label信息提示标签    标签添加后在浏览器中点击后面文字仍然具有选中效果。
+    6）复选框
+        <input type="checkbox" name="like" />
+        <input type="checkbox" name="like" disabled="disabled" />
+             (disabled="disabled":禁用)
+             (checked="checked":默认选中)
+	    （required="required"）
+    7)下拉菜单
+       <select>
+          <option>菜单内容1</option>
+          <option>菜单内容2</option>
+           ...
+       </select>
+    8)多行文本框（文本域）
+       <textarea name="textareal" rows="行数" cols="字符宽度"></textarea>
+        clos:字符宽度 一个英文占一个字符宽度；一个中文占两个字符宽度
+        rows:是行数，代表多少行以后会出现滚动条
+    9)按钮
+       <input type="button" value="按钮内容" name="" />
+       (他和submit的区别是，submit提交按钮起到提交信息的作用，button只起到跳转的作用，不进行提交。) 
+    10）表单外框:fieldset表单框中间的字legend   注：若使用则必须legend紧跟在fieldset后面。
+    扩展知识：post和get的区别
+        1.get是从服务器上获取数据，post是向服务器传送数据。
+        2.get是把参数数据队列加到提交表单action属性所指的url中，在url中可以看到，post是通过http post机制，用户看不到这个过程，
+	3.get传送的数据量较小，不能大于2kb。post传送数据量较大，一般被默认为不受限制。
+	4.get安全性非常低，post安全性较高。但是执行效率却比post方法好。
+	5.传送方式：get通过地址栏传输，post通过报文传输。
+	6.GET产生一个TCP数据包；POST产生两个TCP数据包。
+	7.get参数通过url传递，post放在request body中。
+	8.get请求只能进行url编码，而post支持多种编码方式。
+	9.get请求浏览器会主动cache，而post支持多种编码方式。
+	10.get请求参数会被完整保留在浏览历史记录里，而post中的参数不会被保留。
+------------------------------------------------------------------------------------------------------------------------------------------
+css语法
+  选择符{属性：属性值；属性：属性值}
+  说明：
+      1）每个css样式由两部分组成，即选择符和声明，声明又分为属性和属性值；
+      2）属性必须放在花括号中，属性与属性值用冒号连接
+      3）每条声明用分号结束
+      4）当一个属性有多个属性值时，属性值与属性值不分先后顺序；
+      5）在书写样式过程中，空格、换行等操作不影响属性显示。
+  4、外部样式的建立及调用
+     a:外部样式表的创建
+     b:外部样式表的导入
+     方法一
+         <link rel="stylesheet" type="text/css" href="目标文件的路径及文件名全称" />
+         说明：使用link元素导入外部样式表时，需将该元素写在文档头部即<head>与</head>之间。                 第四天
+     方法二
+         <style type="text/css"
+             @import url(目标文件的路径及文件全称)；
+         </style>
+         注：@和import之间没有空格 url和小括号之间也没有空格；必须结尾以分号结束；
+**********************link和import导入外部样式的区别：************************************************************
+      差别一：本质的差别：    link属于xhtml标签，而@import完全是css提供的一种方式。link标签除了可以加载css外，还可以做更多其他的事情，
+                             比如定义rss，定义rel连接属性等，@import就只能加载css.
+      差别二：加载顺序的差别：当一个页面被加载的时候link引用的css会同时被加载，而@import引用的css会等到页面全部被下载完再被加载。
+              所以有时候浏览@import加载css的页面时开始会没有样式
+      差别三：兼容性差别：    @import是css2.1提出的，所以老的浏览器不支持，@import只在IE5以上的才能识别而Link标签无此问题。
+      差别四：使用dom控制样式时的差别：当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的。
+      3）内联样式表（行间样式，行内样式、嵌入式样式）
+         语法：<标签 style="属性：属性值；属性：属性值；"</标签>
+         注：三者之中内联最大但是！important比内联还大：但是一般情况下在网页中是杜绝使用它的
+      常用选择符
+         类型选择符，id选择符，class选择符，同配符，群发选择符，包含选择符，伪类选择符，伪对象选择符。
+         1）元素选择符/类型选择符（element选择器）
+            语法：元素名称{属性：属性值；}
+            说明：
+            a)元素选择符就是以文档语言对象类型作为选择符，即使用结构中元素名称作为选择符。例如body、div、p、img、em、strong,span...等
+            b)所有的页面元素都可以作为选择符；
+            用法：
+                1.如果想改变某个元素得默认样式时，可以使用类型选择器；
+                2.当统一文档某个元素的显示效果时，可以使用类型选择器；
+         2）id选择器
+            语法：#id名{属性：属性值；}
+            说明：
+                1）当我们使用id选择符时，应该为每个元素定义一个id属性；
+                2）id选择符的语法格式是“#”加上自定义的id名
+                3）起名时要取英文名不能用关键字
+                4）一个id名称只能对应文档中的一个具体的元素对象，因为id只能定义页面中的唯一的元素对象
+                5）最大的用处：创建网页的外围结构。
+         3）class选择器
+            语法：.class名{属性：属性值；}
+            说明：
+                1.当我们使用类选择器时，应当为每个元素定义一个类名称
+                2.类选择符的语法格式<div class="top"/div>
+            用法：class选择符更适合定义一类样式；
+        4）同配符
+           语法：*{属性：属性值；}
+           说明：通配符的写法是*含义是所有元素
+           用法：常用来重置样式。
+        5）群组选择器
+           语法：选择符1，选择符2{属性：属性值；}
+           说明：当有多个选择器应用相同的样式时可以将选择符用，分隔开的方法合并为一组
+      ***）居中：选择符{margin:0 auto;}
+        6)包含选择器
+          语法：选择符1 选择符2{属性：属性值；}
+          说明：选择符1和选择符2用空格隔开，含义就是选择符1中包含的所有选择符2；
+        7）伪类选择符（伪类选择器）
+           语法：
+           a:link{属性：属性值；}超链接的初始状态；
+           a:visited{属性：属性值；}超链接被访问后的状态；
+           a:hover{属性：属性值；}鼠标悬停即鼠标划过超链接时的状态；
+           a:active{属性：属性值；}超链接被激活时的状态，即鼠标按下时的状态；
+           说明：
+               1）当这四个超链接伪类选择符联合使用时，应注意他们的顺序，正常顺序为；
+                  a:link,a:visited,a:hover,a:active错误的顺序有时会使超链接的样式失效；
+               2）为了简化码，可以把伪类选择符中相同的声明提出来放在a选择符中；
+                  例如：a{color：red；} a:hover{color:green;}表示超链接的三种状态相同，只有鼠标划过变颜色。
+           权重       0（!important）   0（id选择器）    0（class名/伪类）   0（元素选择器）
+           css中用四位数字表示权重，权重的表达方式如：0，0，0，0
+                类型选择符的权重为0001
+                class选择符的权重为0010
+                id选择符的权重为0100
+                子选择符的权重为0000
+                属性选择符的权重为0010
+                伪类选择符的权重为0010
+                伪元素选择符的权重为0010
+                包含选择符的权重：为包含选择符的权中之和
+                内联样式的权重为1000
+                继承样式的权重为0000
+-----------------------------------------------------------------------------------------------------------------------------------
+css核心属性
+  1.文本大小：{font-size:12px/14px/16px;}
+    说明：
+        1）属性值为数值型时，必须给属性值加单位，属性值为0时除外。
+        2）单位还可以是pt,9pt=12px;
+        3)为了减小系统间的字体显示差异，IE Netscape
+    Mozilla的浏览器制作商于1999年召开会议，共同确定16px/ppi为标准字体大小默认值，即1em。
+    默认情况下1em=16px，0.75em=12px；
+    em这个单位默认情况下是1em=16px；但是他是根据父元素的大小而改变的；如果父元素font-size：32px；
+    那么这个时候子元素1em=32px；
+  3.文本字体：{font-family:"字体1"，"字体2”;}
+    说明：
+        当字体是中文字体时需加引号；
+        当字体是英文字体中有空格时需加引号如“Times New Roman”;
+    Windows中文版操作系统下，中文默认字体为宋体或者新宋体，英文字体默认为Arial。                           第五天
+    文字属性简写：font：12px/1.5em“宋体”；
+    font属性的简写：    字号/行高，字体;
+    说明：font的属性值应按以下次序书写（各个属性之间用空格隔开）
+    顺序：font-style  font-weight  font-size/line-height font-family
+          1.简写时，font-size和line-height只能通过斜杠/组成一个值，不能分开写。
+          2.顺序奴能改变这种简写法只有在同时指定font-size和font-family属性时才一起作用，
+            如果你没有设定font-weight，font-style，他们会使用缺省值。
+  4、加粗：{font-weight：bolder/bold/normal/100-900}
+    说明：
+        1）在css规范中把字体的粗细分为9个等级分别从100-900，其中100对应最轻的字体变形，而900最重
+           100-500常规字体
+           600-900加粗字体
+  5、倾斜：{font-style：normal常规字体/italic/oblique倾斜；}
+     说明：
+         1）italic和oblique都表示倾斜，不过oblique的幅度要大一些但一般浏览器对他们的区分不是很明显
+  6、检索或设置对象中的文本的大小写
+     text-transform：none无转换/capitalize首字母大写/uppercase全部大写/lowercase全部小写
+  7、水平对齐方式{text-align：left/right/center/（了解）justify（个别浏览器不兼容 例如IE、谷歌）}
+  8、垂直对齐方式{vertical-align：top/bottom/middle；}
+  9、行高{line-heigt：normal/数值；}
+     说明：
+         1）当单行文本的行高等于容器高时，可以实现单行文本在容器中垂直方向居中对齐；
+         2）当单行文本的行高小于容器高时，可以实现单行文本在容器中垂直中齐以上任意位置的定位；
+         3）当单行文本的行高大于容器高时，可以实现单行文本在容器中垂直中齐以下任意位置的定位；（IE6以下版本存在浏览器兼容问题）
+  10、文本修饰：text-decoration：none/underline/overline/line-through/blink。（高版本不支持blink属性）
+      说明：
+          none：没有修饰；
+          underline：添加下划线；
+          overline：添加上划线；
+          line-through：添加删除线；
+          blink：闪烁；（高版本不支持）
+  11、首行缩进：{text-indent：value；}
+     说明：
+         1)text-indent:可以取负值；
+         2）text-indent：属性只对第一行起作用。
+  12、字间距{letter-spacing：value；}控制英文字母或汉字的字距。
+  13、词间距{word-spacing：value；}控制英文单词词距。
+  15、列表样式
+      定义列表符号样式：
+         1）list-style-type：disc（实心圆）/circle（空心圆）/square（实心方块）none（去掉列表符号）；
+         2）使用图片作为列表符号：list-style-image：url（所使用图片的路径及全称）；
+         3）定义列表符号位置：list-style-position：outside/inside；
+         list-style：none；简写
+      边框
+      border: 1px solid #000;
+      边框  大小  线型   颜色
+      线型:实线solid  虚线dashed 点状线dotted 双实线double
+  16、边框样式border
+	1.border-style设置边框样式
+	    none默认不显示     dashed虚线   dotted点线    solid实线      double双实现
+	2.border-width设置边框粗细
+	thin细边框      medium中等默认        thick粗        length（5px）自定义
+	3.border-color边框颜色
+	4.简写border设置边框样式  
+	     border：边框粗细   样式   颜色；
+	      例：border: 1px dashed #000;
+	5.border-radius设置边框圆角
+    	     border-radius: 25px;或border-radius: 50%;
+		注：可以用数值也可以用百分数。
+  17、关于背景的属性
+     1）背景颜色
+    	 语法：选择符{background-image：url（图片路径及全称）；}
+    	 插入图片：属于网页内容，也就是结构。
+    	 背景图：属于网页的表现，背景图上可以显示文字、插入图片、表格等。
+      3）背景图片的显示原则
+    	 1.容器尺寸等于图片尺寸，背景图片正好显示在容器中；
+    	 1.容器尺寸大于图片尺寸，背景图片将默认平铺，直到铺满元素；
+    	 3.容器尺寸小于图片尺寸，背景图片只显示容器/元素/范围内的背景图。
+     	 *背景图片平铺属性
+     	 语法：选择符{background-repeat：no-repeat/repeat/repeat-x/repeat-y}
+              no-repeat 不平铺/
+              repeat平铺/
+              repeat-x横向平铺/
+              repeat-y纵向平铺/
+     5）背景图片位置
+        语法：选择符{background-position：left/center/right/数值   top/center/bottom/数值；}
+           background-position：值1 值2；
+        水平方向上的对齐方式（left/center/right）或值 垂直方向上的对齐方式（top/center/bottom）或值
+        两个值：第一个表示水平位置的值，第二个表示垂直位置的值。
+        当两个值都是center的时候写一个值就可以代表的是水平和垂直位置都在中间。
+        注：当元素小图片大，写图片的某个位置时：
+        说明：向右方向，向下方向是负值
+     6）背景图的固定
+        语法：选择符{background-attachment：scroll（滚动）fixed（固定）；}
+     7）各属性的缩写
+        语法：选择符{background：属性值1  属性值2  属性值3；} 
+------------------------------------------------------------------------------------------------------------------------------
+盒子模型
+一、盒子模型概念和组成
+	盒子模型是css布局的基石，它规定了网页元素如何显示及元素间互相关系。css定义所有的元素都以拥有可像盒子一样的
+        外形和平面空间即都包含框、边界、补白、内容区。这就是盒子模型
+	  标准盒子模型
+            ---------------------------------------------------
+           |m                     margin-top                m  |
+           |a  -------------------------------------------  a  |
+           |r |                                           | r  |
+ 	   |g |   ------------------------------------    | g  |
+	   |i |  |          ------------              |   | i  |
+	   |n |  |         |   content  |             |   | n  |
+ 	   || |  |          ------------              |   | |  |
+	   |l |  |            padding                 |   |    |
+           |  |   ------------------------------------    | r  |
+	   |e |                                           | i  |
+	   |f |              border-bottom                | g  |
+           |t  -------------------------------------------  h  |
+	   |               margin-bottom                    t  |
+            --------------------------------------------------
+   1）padding的使用方法
+      补充：padding在设定页面中一个元素的内容到边缘（边框）之间的距离。也称补白                            第六天
+      用法：1）用来调整内容在容器中的位置关系
+	    2）用来调整子元素在父元素中的位置
+	     注：padding属性需要额外加在元素原有大小之上的，如想保证大小不变，需从元素宽或高上减掉后添加的padding
+	         属性值。
+	属性值的四种方法：
+	   四个值：上    右    下   左{padding ：10px 20px 30px 40px；}
+           三个值：上     左右     下  {padding ：10px 20px 30px；}
+           二个值：    上下     左右   {padding ：10px 20px；}
+           一个值：      四个方向      {padding ：10px；}
+	说明：可单独设置一方向填充，如：上方向padding-top：10px；    右方向padding-right：10px；
+                                      下方向padding-bottom：10px； 左方向padding-left：10px；
+        注意：块元素上下左右都可以设置padding但是行元素只能设置左右（input/img除外）
+    2）margin使用方法
+	边界：margin在元素外边的空白区域，被称为边距。
+	margin-left左边距  margin-top上边距margin-right右边距margin-bottom下边距
+	四个值：上    右    下   左
+           三个值：上     左右     下 
+           二个值：    上下     左右 
+           一个值：      四个方向  
+	   margin：2px；/*定义元素四边界为2px*/     
+	   margin：2px 4px；/*定义元素上下边界为2px左右为4px*/
+           margin：2px 4px 6px 8px；/*定义元素上边界为2px右为4px下边界为6px左边界为8px*/
+	   margin：2px 4px 6px；/*定义元素上边界为2px左右为4px下边界为6px*/
+	   margin：0 auto；   在浏览器中横向居中
+        定义元素上下边界为2px，
+	    说明：可单独设置一方向边界如：margin-top：2px；
+	margin值解析：左右边界累加，上下边界重合。
+        ***  注：子元素里面的margin-top会使父元素和他一起下移！！
+                 为了防止父元素不跟随子元素移动可以
+			1.给父元素加border
+			2.给父元素加pading-top: 1px;
+			3.给父元素加overflow:hidden;
+        ***  注：行内块元素可以设置上下左右但是块元素、行元素只能可以设置左右
+   4）border的使用方法
+  	border：边框宽度 边框风格 边框颜色；
+           例：borde：5px solid red；
+        边框：border网页中很多修饰性线条都是由边框来实现的
+            边框宽度：border-width；
+            边框颜色：border-color；
+            边框样式：border-style：solid（实线）/dashed（虚线）/dotted（点线）/double（双实线）
+        可单独设置一方向边框 
+            border-bottom：边框宽度 边框风格 边框颜色；底边框
+            border-top：   边框宽度 边框风格 边框颜色；上边框
+            border-left：  边框宽度 边框风格 边框颜色；左边框
+            border-right：边框宽度 边框风格 边框颜色；右边框
+        *盒子实际大小（公式 w3c）：
+            宽=左右border+左右padding+width（内容宽）
+            高=上下border+上下padding+height（内容宽）
+        *三角形：
+	    width: 0px;
+            border: 120px solid transparent;
+            border-top-color: orange;	
+----------------------------------------------------------------------------------------------------------------
+	注：图像三像素问题（如果写入图片而不设置高时加载出的图片会有三像素的边框解决方案）
+	    给图片加  display：block；
+	   	      border：0；
+	    弹性盒子：
+	          display: flex;
+	          justify-content: space-between; /*将子元素进行均分*/
+                  justify-content:space-around;/*将子元素进行均分(左右两边会有空白中间的空是两边的二倍)*/
+-------------------------------------------------------------------------------------------------------------------
+	浮动问题的解决方案：
+	   1）浮动父元素高度自适应（父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷）
+		hack1：给父元素添加声明overflow：hidden；
+		hack2：在浮动元素下方添加空div，并给该元素添加声明：clear:both;height:0;overflow:hidden;
+		hack3:万能清除浮动法:
+			选择符::after{ 
+				       content:"";
+				       clear:both;
+				       display:block;
+				       height:0;
+				       overflow:hidden;
+			               visibility:hidden;
+                                     }
+	浮动的三个特点：
+		1.脱离文档流。
+		2.向左/向右浮动直到父元素或者别的浮动元素。
+		3.浮动会导致父元素高度塌陷。
+	注：display: block;/inline/inline-block/none(将元素消失)/list-items(列表)/
+	加在元素后面的内容::after{            
+		 content:‘内容’；
+		}
+	加在元素前面的内容::before{
+				   content:‘内容’；
+				  }
+	区别：
+	     元素消失并且不占位置：display:none;
+	     元素消失但是占位置：visibility:hidden;
+
+ps使用:
+双击打开PS
+然后 双击插入图片
+1.清除校准线  ctrl + H
+2. Alt + 滑轮向上 放大图片
+3. Alt + 滑轮向下 缩小图片
+4.Ctrl + 滑轮向上  图片右移
+5.Ctrl + 滑轮向下  图片左移
+
+图片格式后缀名有  jpg  png  bmp  gif
+
+psd ai 是UI设计给的图
+
+Ctrl + R   调出标尺
+
+
+截图：
+选中图片后，如果大小不是很合适；右键--变换选区；
+调节成合适的大小后，enter一下
+ctrl + c 将选中区域复制
+Ctrl+ N   enter 新建一个区域用来放图片
+Ctrl+ V 将图片复制
+ctrl+ s  保存
+
+图片信息按F8显示   或者在 窗口 找  信息
+
+
+Ctrl   N  新建文件
+起名字 index.html
+
+Ctrl S  保存
+！  tab  调出基本结构
+-------------------------------------------------------------------------------------------------------------
+      1.满足省略号的四个条件
+	 li{
+		width: 400px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis; 							【第十天】
+	   }
+      2./*位置固定*/
+	  position: fixed;
+      3./*去除聚焦线*/
+	outline: 0;
+	border: 0;
+      4.滚动字幕应用：
+          <marquee behavior(行为)="scroll(滚动)/alternate(晃动)"
+                   direction(方向)="up(从下向上)/down(从上向下)/left（从右向左）/right（从左向右）"
+                   scrollamount（滚动速度）="value"height="value(上下滚动范围)"width="(左右滚动范围)">
+               内容...
+          </marquee>
+-------------------------------------------------------------------------------------------------------------------
+position定位属性，检索对象的定位方式：
+    一、语法：position：static/absolute/relative/fixed
+    	取值：
+     	     1.static：默认值，无特殊定位，对象遵循html原则；
+      	     2.absolute：绝对定位（不占据原有空间），将对象从文档流中脱离出来，使用left/right/top/bottom等属性相对其最
+                            接近的一个并有定位的父元素进行绝对定位；如果不存在这样的父元素，则依据html（根元素），
+                       	    而其层叠通过z-index属性定义；
+       	     3.relative：相对定位（占据原有空间），对象不可层叠，将依据right、top、left、bottom（相对定位）
+                            等属性在正常文档流中偏移位置（相对于自己原来的位置偏移）.
+       	     4.fixed：固定定位（不占据原有空间），对象定位遵循绝对定位方式但是要遵循一些规范（IE6浏览器不支持此定位）
+                            根据浏览器的窗口来定义自己的位置。
+        **透明度设置：
+		1、opacity: 0.5;---------------------透明度取值0~1（0完全透明）
+		2、filter: alpha(opacity=50)；-------兼容ie低版本取值0~100
+		3、background: rgba(210,20,30,0.1);--改变背景透明度,字体不变透明度                     
+     二、CSS Sprites的原理（图片整合技雪碧图/图片精灵）
+		1、将导航背景图片，按钮背景图片等有规则的合并成一张背景图，即将多张图片和为一张整图，     【第十一天】
+		   然后用background-position来实现背景图片的定位技术。
+	图片整合的优势：
+		1、通过图片整合来减少对服务器的请求次数，从而提高页面的加载速度。
+		2、通过整合图片来减少图片体积。  
+--------------------------------------------------------------------------------------------------------------------
+	CSS3新增选择器
+		元素:first-child选择某元素的第一个子元素；
+		元素:last-child选择某元素的最后一个子元素；
+		元素：nth-child（）选择某个元素的一个或多个特定的子元素；
+			元素：nth-child（length）；参数是具体数值
+			元素：nth-child（n）；/*n从0开始计数*/
+			元素：nth-child（n*length）；/*n的倍数选择器，n从0开始计数*/		
+			元素：nth-child（n+length）；/*选择大于length后面的元素*/	
+			元素：nth-child（-n+length）；/*选择小于length后面的元素*/                      【第十二天】
+			元素：nth-child（n+length+1）；/*表示隔几选*/
+				上面length为整数
+		元素：nth-last-child（）选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算；
+		元素：nth-of-type（）选择指定的元素；
+----------------------------------------------------------------------------------------------------------------------
+前端性能优化
+
+一、CSS文档统筹
+
+1）整站里相同的CSS样式提取到一个样式表里，各个页面调用相同的样式文件即可。
+2）网站较大的情况下一般会把网站的头部，尾部单独分离出来，包括样式文件。
+ 网页自身优化（如何让网站被搜索引擎搜索到）：
+ 
+
+★页面主题优化
+实事求是的写下自己网站的名字，网站的名字要合理，最好包含网站的主要内容。
+ 
+★页面头部优化
+		页面头部指的是代码中部分，具体一点就是中的“Description（描述）”和“Keywords（关键字）”两部分：
+		1、“描述”部分应该用近乎描述的语言写下一段介绍你网站的文字，在这其中，你应该适当的对你网站的特色内容加以重复以求突出；
+		2、“关键字”部分应该列出你认为合适的，能突出网站内容的关键字就可以了，关键字不要设置太多，
+		    可设置10---8个，搜索引擎只会浏览靠前的几个关键字。
+			<meta name="keywords"   content="" />向搜索引擎说明你的网页的关键词；
+			<meta name="description"    content=""/>告诉搜索引擎你的站点的主要内容；
+ 
+
+			<meta name="generator" content="">用以说明生成工具（如Microsoft FrontPage 4.0）等；
+			<meta name="author"content="你的姓名">告诉搜索引擎你的站点的制作的作者；
+★超链接优化
+搜索引擎为何可以能够索引全世界的网站，是因为各个搜索引擎程序中都有一个会自动“爬行”于互联网上的智能机器人程序，
+这个机器人就是顺着网站之间的链接游览世界的，那么我们就应该为它创造一个良好的爬行通道——合理的设置链接。 怎样的链接才是合理的呢？
+1、采用纯文本链接，少用，最好是别用Flash动画设置链接，因为搜索引擎无法识别Flash上的文字.
+ 
+许多公司、个人都喜欢酷酷的Flash动画，网站的入口也做成Flash片断，，搜索引擎很难光顾这样的网站。而且个别设计者非常马虎，
+把网站的入口链接放在了Flash上，有时因为网络繁忙、缺少Flash插件而导致用户根本就看不到网站的内容，
+ 
+
+2、按规范书写超链接，这个title属性，它既可以起到提示访客的作用，也可以让搜索引擎知道它要去哪里.
+3、最好别使用图片热点链接，理由和第一点差不多。
+ 
+
+★图片优化(alt属性，title属性)
+图片优化并不是修改图片的大小、颜色，而是你应该为每个标签加上alt属性，alt属性的作用是当图片无法显示时以文字作为替代显示出来，
+而对于SEO来说，它可以令搜索引擎有机会索引你网站上的图片，对于一些确实没什么意义的图片，最好也不要省略alt，而应该留空，即 alt=""。
+ 
+
+★为网站制作一个“网站地图”
+什么是网站地图？说白了就是一个页面，在这个页面上呢，列出了你网站中各个栏目的入口地址，例如：http://sitemap.163.com，
+站点地图的作用很大，首先，对于一个栏目众多的网站，它可以帮助访客最快速度找到所需的内容；二则，可以给搜索引擎提供一份自己网站的“鸟瞰图”，方便搜索机器人依次索引整个网站。
+ 
+
+★PageRank（pr值,友情链接）
+ 
+
+PR值是Google提出的一个重要参数，它标明了某个网站的重要程度，那么pr值是如何确定的呢？目前普通的解释为：假如有ABC三个网站，彼此互作友情链接，那么当一个访客通过A上的友情链接来到B时，Google就认为A为B投了“一票”，同理，如果有人从C访问B，那么B又得一票，如果全世界的网站上都有B的友情链接，B就是世界上最重要的网站了！
+那么如何提供我们自己的pr值，方法为交换链接！应该找一些和自己网站内容相近，且较为优秀的网站，但不要疯狂的交换链接，如果你的首页上一下子多了几百个友情链接，Google不但不会提升你的pr，有可能认为你作弊，从而把该网站从自己的数据库中删除.
+ 
+
+ ★静态页面与动态页面
+目前所有的SEO都认为，Google一类的搜索引擎会尽量避免索引带有参数动态页面，而喜欢索引普通的静态页面，这一点并未得到Google等搜索引擎的明确回答，但从效果来看是这样。
+ 
+毕竟动态页面的变数太大，举个例子，你发了一个帖子，可能在论坛某板块的第1页上，可随着跟贴的增加你的发言可能就被挤到第10页上了， 因此，制作网站的时候，最好避免使用动态页面，或者改良技术，让动态页面自动生成对应的静态页面，既能便于搜索引擎收录，也可以降低网站服务器、数据库负担，一举两得，不过这也不是绝对的，网站流量决定一切，即便是一个全部采用动态页面的网站，但因为很受欢迎访客不断，那么它还是会被搜索引擎青睐，还是会出现在搜索结果的前列。而且，随着技术的进步，搜索引擎也会改进，搜索动态页面将来必定会更加容易。
+ 
+
+★避免大“体积”的页面
+有经验标明，搜索引擎不喜欢索引大体积的页面，即一个页面代码部分的体积不要太大，控制在100kb内为佳.
+ 
+★最重要的一点！合理的代码结构
+搜索引擎喜欢格式清晰，结构分明的页面，理论上XML是最合乎搜索引擎，当然，这太极端了，不过如果采用XHTML+CSS技术将页面数据同表现分离，即避免大量嵌套表格和其它冗余的代码还是能够完美实现这一要求的。
+ 
+
+原则：简化代码，易修改
+ 二、CSS规范
+1、命名方法（语义化命名，结构化命名）
+ID:结构化    header footer   
+class: .border0    . red:    .font12      .clear
+      2、CSS命名规则
+1）建议使用小写字母
+2）以英文字母开头，后面可以连接数字、字母、下划线、连字符，建议尽量使用英文字母，适当使用下划线和连接线；
+3）词必达意，名称要反映用途和相关信息，同时也要简短。
+ 
+
+三、样式重置
+1、规则设置
+以新浪为例：
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+img{display: block;}
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; } 
+body { color:#333; font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+a { color:#666; text-decoration:none; }
+a:visited { color:#666; }
+2、腾讯
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;}
+a{color:#172c45;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+.ind{text-indent:2em} 
+.ind10{text-indent:10px;}
+.noborder{border:0;}
+ 
+
+3、搜狐
+body{font-family:"\5B8B\4F53","Arial Narrow",HELVETICA;text-align:center;margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;} 
+body > div{text-align:center;margin-right:auto;margin-left:auto;} 
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none}
+table,td,input{font-size:12px;padding:0} /* 默认链接颜色 */ 
+a{outline-style:none;color:#333;text-decoration:none}
+a:hover{color:#c00;text-decoration:underline;}
+ 
+
+子选择器
+语法：选择符1>选择符2{属性：属性值;}
+作用：只对选择符1下的子元素选择符2起作用;
+
+五大浏览器内核代表作
+Trident:IE、Maxthon(遨游)、腾讯、Theword世界之窗、360浏览器
+代表作品IE，因为IE捆绑在Windows中，所以占有极其高的市场份额，有成IE内核或MSHTML,此内核只能应用于Windows平台，且是不可开源的。
+Gecko:代表作Mozilla Firefox 是开源的它的最大优势是跨平台的，能在Microsssoft Windows、Linux和MacOS x等主要操作系统上运行
+Webkit:代表作品Safari、Chrome是一个开源项目
+Presto：代表作品Opera、presto是由opera software开发的浏览器排版引擎。它也是世界上公认的渲染速度最快的引擎。
+Blink：是由Google和Opera Software开发的浏览器排版引擎2013年4月发布。
+ 
+最早浏览器：网景领航者（1994-2008）简称NN
+
+IE常见css解析bug及hack
+1.图片间隙
+A）div中的图片间隙（该bug出现在IE6及更低版本中）
+描述：在div中插入图片时，图片会将div下方撑大三要素。
+hack1：将</div>与<img>写在一行上；
+hack2：将<img>转为块级元素，给<img>添加声明：display：block；
+B）dt，li中图片间隙（IE6）
+hack：将<img>转为块级元素，给<img>添加声明：display：block；
+
+
+2）双倍浮向（双倍边框）
+描述：当ie6及更底版本浏览器在解析浮动元素时会错误的把浮向边边界加倍显示
+hack：给浮动元素添加声明：display：inline；
+
+
+3）默认高度（IE6）
+描述：在ie6及以下版本中部分块元素拥有默认高度（低于16px高度）
+hack1：给元素添加声明：font-size：0；
+hack2:给元素添加声明:overflow:hidden;
+4)表单元素行高不一样（IE、moz、c、o、s）
+简述：表单元素行高对齐方式不一致
+hack：给表单元素添加声明:float：left；
+5）按钮元素默认大小不一致
+描述：各浏览器中按钮元素大小不一致
+hack1：统一大小/（用a标记模拟）
+hack2：input外边套一个标签在这个标签里写按钮的样式，把input的边框去掉（推荐）
+hack3：如果这个按钮是一个图片，直接把图片作为按钮的背景图
+6）浏览器解析按钮边框时，会把按钮边框解析在按钮内部，不会影响按钮的原有大小
+7）百分比bug
+描述在ie6及以下版本中在解析百分比时会四舍五入方式计算从而导致50%加50%大于100%的情况
+hack：给右边的浮动元素添加声明：clear：right；意思：清除右浮动
+注释：元素右浮的时候清除左浮动元素左浮的时候清除右浮动
+8）鼠标指针bug
+描述：cursor属性的hand属性值只有ie浏览器识别，其他浏览器不识别，cursor属性的pointer属性值ie6.0以上版本及其它内核浏览器都识别
+hack：如统一某元素鼠标指针形状为手型，应添加声明：cursor：pointer；
+扩展
+cursor：crosshair十字架/pointer手型/move移动/e-resize左右方向/ne-resize向右及向上移动/nw-resize向上及向左移动/n-resize向上移动
+se-resize向下及向右移动/a-resize向下移动/w-resize向左移动/text文本/wait等待状态/help帮助
+9）列表阶梯bug（ie6及更低版本的浏览器中）
+bug1：在给的子元素中使用了float：left；父元素中没有设置浮动属性，会出现垂直效果
+hack：给父元素设置浮动便能解决此问题
+bug2：当给li里的a转成块元素，且a写了浮动后并a设置了固定高度时在ie6及更低版本浏览器里会出现li阶梯效果
+hack：给li也同时设置左浮即可
+10）浏览器解析margin属性值时，上下边界的属性重合，左右相加。
+11）在ie6及更低版本中的浏览器里，如果想去掉input的默认边框需将其border属性值设置成0方可兼容而非none；
+12）bug子元素美设置任何浮动，设置了margin-top属性后，会错误的把margin-top的属性添加给父元素（块元素）
+hack1：给父元素添加overflow：hidden；声明。
+如果子元素设置了浮动属性也不会出现这个问题
+13）li里a加display：block；（ie6以下版本浏览器）出现行高不一致；
+hack：给li加float：left；（并设置li的宽度等于父元素的宽度）
+14）透明属性
+ie8以下浏览器写法：filter：alpha（opacity=value）：取值1-100
+兼容其他浏览器写法：opacity：value；（value的取值0-1，0.1，0.2，...1）
+---------------------------------------------------------------------------------------------------------------------------
+transition过渡
+transition-duration过渡时间
+transition-delay延迟时间
+transition-property：属性（哪个属性过渡）；语法transition-property：all|none|property，property...默认值：all
+			取值all：所有可以进行过渡的css属性；
+			none：不指定过度的css属性property：
+			指定要进行过度的css属性说明 检索或设置对象中的参与过度的属性。如果多个用逗号隔开
+transition-time-function：过度的函数（easy|linear|ease-in|ease-out|ease-in-out|cubic-bezier）；默认值：ease
+easy：越来越慢；
+easy-in：先慢后快；
+easy-out：先快后慢；
+easy-in-out：先慢后快再慢；
+linear：匀速运动；
+cubic-bezier（number，number，number，number）：贝塞尔曲线类型
+transform变形
+transform：skew（X轴平移，Y轴平移）；扭曲，倾斜 deg
+transform：scale（X轴缩放，Y轴缩放）；数字
+transform：rotate（旋转）；deg 度数
+transform：translate（X轴偏移，Y轴偏移）；位移px
+transition的局限
+transition的优点在于简单易用，但是它有几个很大的局限
+（1）transition需要事件触发，所以没法在网页加载时自动发生。
+（2）transition是一次性的，不能重复发生，除非一再触发。
+（3）transition只能定义开始状态和结束状态，不能定义中间状态，也就是说只有两个状态。
+（4）一条transition规则，只能定义一个属性的变化，不能涉及多个属性。
+CSS Animation就是为了解决这些问题而提出的。
+Transition：对元素某个属性或多个属性的变化，进行控制，但只有两个关键贞 开始 和 结束
+Animation：对元素某个属性或多个属性的变化，进行控制，
+	   可以设置多个关键贞 transition 需要触发一个‘事件’ animation 不需要触发任何事件
+
+-------------------------------------------------------------------------------------------------------------------
+元素垂直水平居中
+1.不知元素宽高时：父相子绝的基础上给子元素加  left:0;right:0;bottom:0;top:0;margin:auto;即可让子元素位于父元素中心中
+2.不知元素宽高时:父元素加  display:flex;justify-content:center;（将项目【子元素】水平居中）align-iteam:center;(将项目垂直居中)
+3.不知元素宽高时transform:translate(-50%,-50%);
+4.当元素知道宽高时：父相子绝的基础上给子元素加left:50%;top:50%;margin-left: -xxpx;(元素宽度一半)margin-top:-xxpx;(元素高度一半)
+5.当元素知道宽高时：transform:translate(-xxpx,-xxpx);元素宽度高度一半
+6.不知元素宽高时:父相子绝的基础上给父元素加display:table-cell;（将元素转换为变革单元格）vertical-align:middle;给子元素加margin：auto；
+盒子阴影：box-shadow:    h-shadow             v-shadow       blur     soread     color         inset/outset
+                       水平阴影距离（必写）  垂直距离（必写  模糊距离   阴影程度     颜色       内外侧阴影（默认外侧）
+word-wrap   属性用来表明是否允许浏览器爱单词内进行断句，这是为了防止当一个字符串太长而找不到它的自然断居点时产生溢出现象
+word-break  属性用来标明怎么进行单词内的断句
+
+  用法：word-wrap：normal|break-word；
+       work-break：normal|break-all|keep-all；
+  区别就是长单词在word-wrap作用下换到下一行，后面可以正常运行，wrod-break的作用下利用了上一行没有用完的空间
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

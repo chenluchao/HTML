@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+					width: 100%;
+					height: 50px;
+					font-weight: 700;
+					line-height: 50px;
+					text-align: center;
+			}
+			h1{
+				/*位置固定*/
+				position: fixed;
+			}
+			input{
+				/*去除聚焦线*/
+				outline: 0;
+				border: 0;
+				background-color: gold;
+			}
+			input::-webkit-input-placeholder{
+				color: red;
+			}
+			/*满足省略号的四个条件*/
+			li{
+				width: 400px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			input[value]{
+				background-color: red;
+			}
+			input[value='shu']:hover{
+				background-color: green;
+			}
+			div+p{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a href="#l1">1</a>
+			<a href="#l2">2</a>
+			<a href="#l3">3</a>
+			<a href="#l4">4</a>
+			<a href="#l5">5</a>
+			<a href="#l6">6</a>
+			<a href="#l7">7</a>
+		</h1>
+		<div style="background-color: brown;" id="l1">一</div>
+		<div style="background-color: green" id="l2">二</div>
+		<div style="background-color: red" id="l3">三</div>
+		<div style="background-color: lightseagreen" id="l4">四</div>
+		<div style="background-color: hotpink" id="l5">五</div>
+		<div style="background-color: darkblue" id="l6">六</div>
+		<div style="background-color: yellowgreen" id="l7">七</div>
+		<input type="text" placeholder="欢迎！" />
+		<ul>
+			<li>a啊啊啊啊啊啊德国人的话浮动幅度很大丰人的话浮动幅度很大丰人的话浮动幅度很大丰厚的小虎队发v换手率过高华人</li>
+			<li>在发行条件付款v不用吃药是皇宫地方v那你觉得妇女公司觉得妇女哦哦九分v你觉得佛 空间的</li>
+			<li>顶顶顶顶杀杀杀撒啊了擦擦了擦了擦可参考才能kcal残存   sasacada 拉拉擦擦擦</li>
+			<li>西安存在多个的一个i努力给你复印件发育法语v规划 的化学发光火车发布修复版本</li>
+		</ul>
+		<input type="button"value="欢迎" />
+		<input type="text" value="shu" />
+		<input type="text" placeholder="hello" />
+		<p>第一个p</p>
+		<div>第一个div</div>
+		<p>第二给p</p>
+		<p>第三个p</p>
+	</body>
+</html>

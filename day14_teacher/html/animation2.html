@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background: pink;
+			/*动画名字*/
+			animation-name: dog;
+
+			/*动画时间*/
+			animation-duration: 4s;
+
+			/*动画次数    infinite无限次*/
+			animation-iteration-count: infinite;
+
+			/*动画方向  reverse倒放  alternate来回*/
+			animation-direction: alternate;
+
+			/*动画延迟*/
+			/*animation-delay: 3s;*/
+
+			/*动画变换函数*/
+			animation-timing-function: linear;
+		}
+		div:hover{
+			/*动画暂停 默认值 running运行    paused暂停*/
+			animation-play-state: paused;
+		}
+		@-webkit-keyframes dog {
+			10%{
+				background: red;
+			}
+			20%{
+				background: green;
+			}
+			50%{
+				background: purple;
+			}
+			70%{
+				background: pink;
+			}
+			85%{
+				background: orange;
+			}
+			100%{
+				background: greenyellow;
+			}
+		}
+		@-o-keyframes dog {
+			100%{
+				background: greenyellow;
+			}
+		}
+		@-moz-keyframes dog {
+			100%{
+				background: greenyellow;
+			}
+		}
+		@keyframes dog {
+			100%{
+				background: greenyellow;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

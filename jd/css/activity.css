@@ -1,0 +1,341 @@
+body{
+background-color: #000000;
+}
+body .same{
+margin: 0 auto;
+width: 1200px;
+}
+/*nav*/
+#navbao{
+width: 100%;
+height: 100px;
+background-color: white;
+}
+nav{
+height: 100px;
+padding-top: 1px;
+}
+nav img{
+vertical-align: middle;
+float: left;
+}
+nav input[type='text']{
+width: 462px;
+height: 35px;
+border: 0;
+outline: none;
+vertical-align: middle;
+}
+nav input[type='button']{
+width: 78px;
+height: 36px;
+border: 0;
+outline: none;
+background-color: #dd4545;
+color: white;
+vertical-align: middle;
+position: absolute;
+top: 0;
+left: 461px;
+}
+.sousuo{
+display: inline-block;
+width: 539px;
+height: 36px;
+border: 2px solid #dd4545;
+margin-left: 100px;
+position: relative;
+margin-top: 20px;
+}
+.che{
+width: 150px;
+height: 35px;
+background-color: #FFFFFF;
+float: right;
+margin-top: 22px;
+margin-right: 23px;
+}
+.che img{
+margin-left: 30px;
+}
+.che span{
+vertical-align: middle;
+color: #a72734;
+margin-top: 10px;
+display: inline-block;
+}
+/*ba01*/
+#bao1{
+width: 100%;
+height: 50px;
+background-color: white;
+border-bottom: 1px solid red;
+}
+#con1{
+height: 50px;
+}
+#con1_left{
+height: 487px;
+width: 190px;
+background-color: white;
+float: left;
+position: relative;
+display: none;
+}
+#sanji{
+width: 190px;
+height: 50px;
+background-color: red;
+float: left;
+}
+.quanfen{
+line-height: 50px;
+width: 190px;
+overflow: hidden;
+text-align: center;
+color: white;
+font-size: 15px;
+}
+#sanji:hover #con1_left{
+display: block;
+}
+.erjicon{
+width: 982px;
+height: 476px;
+background-color: white;
+position: absolute;
+top: 0px;
+left: 194px;
+float: left;
+z-index: 1;
+display: none;
+border: 1px solid darkgray;
+}
+.erji:hover .erjicon{
+display: block;
+}
+.erji .first{
+margin-top: 15px;
+}
+.erji p{
+color: grey;
+text-indent: 2em;
+line-height: 27px;
+}
+.erji .yin:hover{
+background-color: #bdbebe;
+}
+.erji p span:hover{
+color: #f10214;
+}
+.erjicon h6 button{
+border: 0;
+outline: 0;
+background-color: black;
+color: white;
+width: 80px;
+height: 20px;
+margin-top: 15px;
+margin-left: 10px;
+}
+.erjicon h6 button:hover{
+background-color: #6e6e6a;
+}
+.erji .ercon h6{
+font-weight: normal;
+margin-top: 20px;
+}
+.erjicon span{
+margin-left: 10px;
+margin-right: 10px;
+}
+#sanhou{
+width: 200px;
+height: 50px;
+float: left;
+}
+.shcon{
+height: 50px;
+line-height: 50px;
+font-size: 15px;
+}
+.shcon .zi1{
+margin-left: 100px;
+}
+.shcon span{
+margin-left: 50px;
+}
+.shcon span:hover{
+color: red;
+}
+/*banner1*/
+#banner1{
+width: 100%;
+min-height: 100px;
+}
+#ban1_1{
+width: 100%;
+height: 610px;
+background: url(../img/huodong1.jpg) no-repeat center;
+background-size: cover;
+}
+#ban1_2{
+width: 100%;
+height: 466px;
+background: url(../img/hd2.jpg) no-repeat center;
+}
+#ban1_3{
+width: 100%;
+height: 890px;
+background: url(../img/hd3.jpg) no-repeat center;
+}
+#banner2{
+width: 100%;
+height: 1250px;
+}
+#ban2con{
+height: 1250px;
+background-color: white;
+
+}
+#b2con{
+width: 240px;
+height: 300px;
+float: left;
+margin-left: 7px;
+margin-top: 10px;
+border: 1px solid darkgray;
+}
+#b2con:hover{
+box-shadow: 0px 0px 20px #12030a;
+transition-duration: 0.3s;
+}
+.ming{
+color: #838383;
+margin-top: 2px;
+margin-bottom: 5px;
+}
+.jiag{
+color: #bd0000;
+}
+.jiag span:nth-of-type(2){
+font-size: 15px;
+}
+.jiag input{
+float: right;
+width: 90px;
+height: 20px;
+border: 0;
+outline: none;
+background-color: #df3133;
+color: white;
+margin-right: 30px;
+}
+.ming:hover{
+text-decoration: underline;
+color: red;
+}
+/*banner3*/
+#banner3{
+width: 100%;
+min-height: 100px;
+}
+#ban3con{
+width: 1920px;
+height: 541px;
+background: url(../img/hd4.jpg) no-repeat -280px center;
+}
+/*banner4*/
+#banner4{
+width: 100%;
+min-height: 100px;
+}
+#ban4con{
+height: 1565px;
+background-color: white;
+}
+#banner5{
+width: 100%;
+min-height: 100px;
+}
+#ban5con{
+height: 340px;
+width: 1920px;
+background: url(../img/hd5.jpg) no-repeat -280px center;
+}
+#banner6{
+width: 100%;
+min-height: 100px;
+}
+#ban6con{
+width: 1920px;
+height: 337px;
+background: url(../img/hd6.jpg) no-repeat -280px center;
+}
+#banner7{
+width: 100%;
+min-height: 100px;
+}
+#ban7con{
+height: 940px;
+background-color: white;
+}
+#banner8{
+width: 100%;
+min-height: 100px;
+}
+#ban8con{
+height: 956px;
+width: 1920px;
+margin: 0 auto;
+background: url(../img/hd7.jpg) no-repeat -280px center;
+}
+#banner9{
+width: 100%;
+min-height: 100px;
+}
+#ban9con{
+width: 1920px;
+height: 99px;
+background: url(../img/hd8.jpg) no-repeat -280px center;
+}
+#banner10{
+width: 100%;
+min-height: 80px;
+}
+#ban10con{
+width: 1920px;
+height: 80px;
+background: url(../img/hd9.jpg) no-repeat -280px center;
+}
+#banner11{
+width: 100%;
+height: 50px;
+background-color: white;
+}
+#ban11{
+height: 20px;
+}
+.ping img,.ping span{
+vertical-align: middle;
+color: #666666;
+}
+.ping{
+display: inline-block;
+margin-top: 20px;
+margin-left: 80px;
+}
+body #last{
+background-color: white;
+margin-top: 0px;
+height: 80px;
+}
+body footer{
+margin-top: -22px;
+height: 510px;
+}
+input[type='button']:hover{
+background-color: #280700;
+color: #bd0000;
+font-weight: bold;
+}

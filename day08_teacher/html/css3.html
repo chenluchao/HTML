@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*通配符选择器*/
+		*{
+			margin:0;
+			padding:0;
+		}
+		/*元素选择符*/
+		div{
+			width: 300px;
+			height: 50px;
+			background: red;
+			/*与字体有关的*/
+			/*字体大小*/
+			/*font-size: 20px;*/
+			/*字体*/
+			/*font-family: '楷体';*/
+			/*字体颜色*/
+			color:#fff;
+			/*字体加粗*/
+			/*font-weight: bold;*/
+			/*字体倾斜*/
+			/*font-style: italic;*/
+			/*行高*/
+			/*line-height: 50px;*/
+			/*以上有简写*/
+			font:italic bold 20px/50px '楷体';
+			/*文本水平居中*/
+			text-align: center;
+		}
+		a{
+			/*去除文本下划线*/
+			text-decoration: none;
+		}
+		input{
+			/*首行缩进*/
+			text-indent: 20px;
+		}
+		li{
+				/*让小圆点的位置在li上显示*/
+			list-style-position: inside;
+			list-style: none;
+		}
+		.bg{
+			width: 600px;
+			height: 900px;
+			/*背景有颜色*/
+			background-color:red;
+			/*背景图片*/
+			background-image: url(../img/4.gif);
+			/*背景是否平铺*/
+			background-repeat: no-repeat;
+			/*背景位置*/
+			/*background-position: 水平 垂直*/
+			background-position: 80px -100px;
+			/*简写*/
+			background: yellow url(../img/4.gif) no-repeat 80px -100px;
+			/*背景图固定*/
+			background-attachment: fixed;
+		}
+
+
+		.borra{
+			width: 100px;
+			height: 100px;
+			background: green;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+<body>
+	<div>这是一些字</div>
+	<a href="#">的伤感的歌</a>
+	<input type="text" value="SEARVH...">
+	<ul>
+		<li>哈哈哈</li>
+		<li>哈哈哈</li>
+		<li>哈哈哈</li>
+	</ul>
+	<div class="bg"></div>
+
+
+	<div class="borra"></div>
+</body>
+</html>

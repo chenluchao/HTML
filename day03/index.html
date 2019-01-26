@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form表单</title>
+	</head>
+	<body>
+		<form action="" method="get" name="f1">
+			<h2>文本框</h2>
+			<p>用户名<input type="text" value="你的名字"required="required" /></p>
+			<p>用户名<input type="text" placeholder="你的名字" /></p>
+			<h2>密码框</h2>
+			<p>密码<input type="password" placeholder="请输入密码" /></p>
+			<h2>单选按钮</h2>
+			<input type="radio" name="hao" checked="checked" /> 男
+			<input type="radio" name="hao" /> 女
+			<input type="radio" name="hao" /> 不详
+			<h2>信息提示标签</h2>
+			<label><input type="radio" name="sex" checked="checked" /> 男</label>
+			<label><input type="radio" name="sex" /> 女</label>
+			<label><input type="radio" name="sex" /> 不详</label>
+			<h2>多选按钮</h2>
+			<h4>同一组按钮name值必须写且相同</h4>
+			<label><input type="checkbox" name="duo" />苹果</label>
+			<label><input type="checkbox" name="duo" />香蕉</label>
+			<label><input type="checkbox" name="duo" checked="checked" />橘子</label>
+			<label><input type="checkbox" name="duo" />菠萝</label>
+			<label><input type="checkbox" name="duo" disabled="disabled" />梨（禁用）</label>
+			<p><input type="submit" value="提交按钮" /></p>
+			<p><input type="reset" value="重置按钮" /></p>
+			<h2>按钮 提交按钮  重置按钮   普通按钮</h2>
+			<p><input type="button" value="普通按钮" />不刷新</p>
+			<p><button>普通按钮2</button>跳转但是不提交</p>
+			<h2>下拉框</h2>
+			<select>
+				<option>1995</option>
+				<option>1996</option>
+				<option>1997</option>
+			</select>
+			<h2>文本域</h2>
+			<p><textarea name="area" rows="8" cols="7"></textarea></p>
+		</form>
+		<hr />
+		<form action="" method="" name="">
+			<p>名字<input type="text" placeholder="请输入名字" required="required" /></p>
+			<p><input type="text" readonly="readonly" value="快乐" /></p>
+			<p>账号<input type="text" autofocus="autofocus" /></p>
+			<p>密码<input type="password" /></p>
+			<p><input type="submit" /></p>
+		</form>
+	</body>
+</html>

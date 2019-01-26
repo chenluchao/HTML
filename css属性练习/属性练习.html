@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>孙惠</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html, body, .wrap {
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background: url(img/bg.jpg) no-repeat center center;
+			background-size: cover;
+			overflow: hidden;
+		}
+		.wrap {
+			width: 90%;
+			min-width: 1024px;
+			position: relative;
+			background: rgba(0,0,0,0.6);
+			margin: 0 auto;
+		}
+		#words {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+			color: #fff;
+			font-size: 40px;
+			line-height: 120px;
+			text-align: center;
+		}
+		#words>div {
+			overflow: hidden;
+		}
+		#words span {
+			float: left;
+			font-size: 26px;
+			padding: 5px 10px;
+			border: 1px solid #fff;
+			line-height: 24px;
+			background: rgba(255, 192, 203, 0.8);
+		}
+		#words span.good {
+			background: green;
+			color: #fff;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		var words = ["font-size", "font-family", "font-style", "font-weight", "line-height", "white-space", "height", "width", "position", "list-style-type", "list-style-position", "text-decoration", "border", "text-indent", "letter-spacing", "word-spacing", "background-color", "background-image", "background-repeat", "background-attachment", "background-position", "float","color","float","overflow","display","hidden","scroll","visibility","after","block","inline-block","transparent"];
+		var wds;
+		var pos;
+		var step = 1;
+		function makeAllWords() {
+			while(words.length > 0) {
+				var idx = Math.floor(Math.random()*words.length);
+				var wd = words[idx];
+				var row = $("<div></div>");
+				for(var j=0; j < wd.length; j++) {
+					row.append("<span>" + wd.charAt(j) + "</span>")
+				}
+				wds.append(row);
+				words.splice(idx, 1);
+			}
+			pos = -wds.height();
+			wds.css("transform", "translateY(" + pos + "px)");
+		}
+		function gogogo() {
+			pos += step;
+			wds.css("transform", "translateY(" + pos + "px)");
+			if(wds.height() + wds.offset().top >= $("body").height()) {
+				alert("不要灰心，再来挑战一次吧。");
+				location.reload(true);
+			}
+		}
+
+		$(function(){
+			wds = $("#words");
+			var idx = 0;
+			var isBegan = false;
+			$(document).on("keydown", function(e){
+				if(!isBegan) {
+					isBegan = true;
+					makeAllWords();
+					// 这边是调速度的
+					setInterval(gogogo, 25);
+				}
+
+				var row = $("#words>div:last");
+				var wd = $("#words>div:last>span");
+				var len = wd.length;
+				if(wd.eq(idx).text() == e.key) {
+					wd.eq(idx).addClass("good");
+					idx++;
+					if(idx == len) {
+						row.fadeOut(500, function(){
+							row.remove();
+						});
+						idx = 0;
+					}
+				}				
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="wrap">
+	<div id="words">按任意键开始</div>
+</div>
+</body>
+</html>

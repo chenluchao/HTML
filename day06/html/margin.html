@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>外边界</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#mar{
+				width: 400px;
+				height: 400px;
+				background: pink;
+				/*元素边界与边界之间的距离  margin*/
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+			#big{
+				margin-top: 50px;
+				width: 300px;
+				height: 260px;
+				background: red;
+				padding-top: 40px;
+				overflow: hidden;
+				/*给子元素加margin-top,为了防止父元素不跟随子元素移动
+				1.给父元素加border
+				2.给父元素加pading-top: 1px;
+				3.给父元素加overflow:hidden;*/
+				/*border: 1px solid red;*/
+			}
+			.small{
+				/*display: inline-block;*/
+				width: 100px;
+				height: 100px;
+				background: pink;
+				/*margin-top: 40px;*/
+				margin-left: 40px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="mar"></div>
+		<div id="big">
+			<div class="small">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

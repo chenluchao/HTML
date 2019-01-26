@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#first{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				padding: 50px;
+				border: 2px solid black;
+				/*怪异盒模型衍生的现代浏览器适用的属性*/
+				/*box-sizing:  content-box/border-box;*/
+				  /*content-box:添加padding和border会让大小改变需要进行加减法操作*/
+				 /*borde-box：添加padding和border不会改变大小即不需要进行加减法 */
+				box-sizing: content-box;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/demo1.css"/>
+	</head>
+	<body>
+		<div id="first">
+			年后基地啊
+		</div>
+		<div id="big">
+			<div id="small">
+				
+			</div>
+		</div>
+
+	</body>
+</html>

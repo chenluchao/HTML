@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>相对定位</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+		div{
+			width: 300px;
+			height: 300px;
+		}
+		.box1{
+			background: green;
+			/*margin-left: 302px;
+			margin-top: 50px;*/
+			/*相对定位*/
+			position: relative;
+			/*left: 400px;
+			top:100px;*/
+			right: 100px;
+			bottom: 200px;
+		}
+		.box2{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<!-- 定位：相对定位、绝对定位、固定定位
+	position:static(默认值) relative(相对定位)
+			 absolute(绝对定位) fixed(固定定位) -->
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>

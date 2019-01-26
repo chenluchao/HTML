@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background: cyan;
+			/*动画名字*/
+			animation-name: pyy;
+			/*动画时间*/
+			animation-duration:40ms;
+			/*动画次数  infinite无数次*/
+			animation-iteration-count: infinite;
+		}
+		/*关键帧@keyframes*/
+		@-webkit-keyframes pyy{
+			0%{background: yellow}
+			26%{background: green;}
+			49%{background: red;}
+			73%{background: purple;}
+			100%{background: pink;}
+		}
+		@-o-keyframes pyy{
+			0%{background: yellow}
+			26%{background: green;}
+			49%{background: red;}
+			73%{background: purple;}
+			100%{background: pink;}
+		}
+		@-moz-keyframes pyy{
+			0%{background: yellow}
+			26%{background: green;}
+			49%{background: red;}
+			73%{background: purple;}
+			100%{background: pink;}
+		}
+		@keyframes pyy{
+			0%{background: yellow}
+			26%{background: green;}
+			49%{background: red;}
+			73%{background: purple;}
+			100%{background: pink;}
+		}
+
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

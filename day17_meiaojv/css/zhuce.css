@@ -1,0 +1,96 @@
+nav{
+width: 656px;
+height: 454px;
+margin: 0 auto;
+}
+#left{
+width: 326px;
+height: 298px;
+float: left;
+margin-top: 55px;
+border-right: 1px solid grey;
+}
+#left h2{
+font-size: 18px;
+margin-top: 26px;
+}
+#left select{
+width: 96px;
+height: 34px;
+background-color: #f1f1f1;
+color: #898693;
+border: none;
+border-right: 1px solid grey;
+vertical-align: middle;
+}
+.shou{
+width: 159px;
+height: 34px;
+border: none;
+margin-left: -4px;
+vertical-align: middle;
+outline: none;
+}
+#left p:nth-child(2){
+border: 1px solid grey;
+margin-top: 25px;
+width: 256px;
+margin-left: 4px;
+}
+#left .pas{
+width: 254px;
+height: 34px;
+border: 1px solid grey;
+margin-left: 4px;
+margin-top: 18px;
+outline: none;
+}
+#left .check{
+margin-left: 4px;
+margin-top: 20px;
+}
+#left .check span:hover{
+text-decoration: underline;
+color: crimson;
+}
+#left .yan{
+width: 163px;
+height: 35px;
+outline: none;
+margin-left: 4px;
+margin-top: 18px;
+}
+#left .yanan{
+width: 86px;
+height: 38px;
+border: none;
+outline: none;
+background-color: #5eab1f;
+}
+#left button{
+margin-top: 20px;
+width: 255px;
+height: 35px;
+color: white;
+background-color: #fc6808;
+border: none;
+margin-left: 4px;
+}
+#right{
+float:right;
+width: 326px;
+height: 298px;
+margin-top: 55px;
+}
+#right img{
+margin-top: 50px;
+margin-left: 116px;
+}
+#right p{
+font-size: 15px;
+margin-left: 80px;
+margin-top: 22px;
+}
+#right p span{
+color: #7ba167;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遮罩层</title>
+	<style>
+		img{
+			display: block;
+			border:0;
+		}
+		*{
+			margin:0;
+			padding:0;
+		}
+		#big{
+			width: 250px;
+			height: 250px;
+			position: relative;
+		}
+		.mask{
+			width: 250px;
+			height: 250px;
+			background: pink;
+			position: absolute;
+			left: 0;
+			top:0;
+			opacity: 0.8;
+		}
+		#big:hover .mask{
+			/*opacity: 0.5;*/
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="big">
+		<div class="mask"></div>
+		<img src="../img/1.gif" alt="">
+	</div>
+</body>
+</html>
